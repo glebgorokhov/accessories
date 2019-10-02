@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Аксессуары | Карта верстки</title>
+    <title>Аксессуары | Каталог</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
@@ -38,9 +38,30 @@
             </div>
         </div>
         <main class="main" role="main">
-            <div class="sitemap">
-                <div class="container"><a class="sitemap__link js-fancybox" href="#popup-success">[Попап] Сообщение отправлено (#popup-success)</a><br><br><a class="sitemap__link" href="ui-kit.html">UI-kit (ui-kit.html)</a><a class="sitemap__link" href="index.html">Главная (index.html)</a><a class="sitemap__link" href="catalogue.html">Каталог (catalogue.html)</a><a class="sitemap__link" href="category.html">Категория (category.html)</a></div>
+            <div class="breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></div>
+                    <div class="breadcrumbs__item">
+                        <p class="breadcrumbs__link">Каталог</p>
+                    </div>
+                </div>
             </div>
+            <div class="shops-bar">
+                <div class="container"><a class="shops-bar__button js-fancybox" href="#popup-shops"><span class="shops-bar__button-wrap shops-bar__button-wrap_choose"><img src="assets/images/choose-shop.svg" alt="Выбрать магазин" /><span>Магазин не выбран</span></span><span class="shops-bar__button-wrap shops-bar__button-wrap_shop"><img src="assets/images/exchange.svg" alt="Поменять магазин" /><span>Москва, Садово-Спасская, 51</span></span></a><img class="shops-bar__logo" src="assets/images/shops/mvideo_empty.png" alt="МВидео" title="" /></div>
+            </div>
+            <section class="section">
+                <div class="container">
+                    <div class="search-form search-form_margin-bottom_50">
+                        <p class="search-form__title">Укажите название аксессуара или модель пылесоса</p>
+                        <form class="search-form__form" action="#" method="post"><input class="search-form__input" name="text" type="text" placeholder="Пылесборник Menalux 200" /><button class="button search-form__button" type="submit">Искать</button><svg class="search-form__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg></form>
+                    </div>
+                    <div class="categories"><a class="categories__item" href="#">
+                            <p class="categories__title">Пылесборники (22)</p><svg class="categories__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow_right"></use></svg>
+                        </a><a class="categories__item" href="#">
+                            <p class="categories__title">Фильтры (13)</p><svg class="categories__arrow"><use xlink:href="assets/images/icon.svg#icon_arrow_right"></use></svg>
+                        </a></div>
+                </div>
+            </section>
         </main>
         <div class="footer">
             <div class="container">
