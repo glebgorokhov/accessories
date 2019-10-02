@@ -1,0 +1,31 @@
+mixin header()
+  +b.header&attributes(attributes)
+    .container
+      +e.A.logo(href="#")
+        img(src="assets/images/logo.svg" alt="Лого")
+
+      +e.burger.js-burger-menu
+        +icon('close').__close.js-burger-close
+
+        +e.menu
+          each item in getData('header').menu
+            +e.A.item(href=item.link)
+              +icon(item.icon).__icon
+              +e.P.text!= item.text
+
+      +e.burger-button.js-burger-button
+        span
+
+mixin ui-kit-header()
+  +ui-section
+    +ui-section-head
+      +ui-title Шапка
+      +ui-path
+        p Компонент: components/header/header
+
+    +ui-section-content(true)
+      +header
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

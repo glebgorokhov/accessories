@@ -1,0 +1,17 @@
+mixin page-content-wrap()
+  +b.page-content-wrap.js-page-content&attributes(attributes)
+    block
+
+mixin ui-kit-page-content-wrap()
+  +ui-section
+    +ui-section-head
+      +ui-title Обертка контента
+      +ui-path
+        p Компонент: components/page-content-wrap/page-content-wrap
+
+    +ui-section-content()
+      +page-content-wrap
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

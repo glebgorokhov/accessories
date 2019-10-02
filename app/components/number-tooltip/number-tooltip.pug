@@ -1,0 +1,20 @@
+mixin number-tooltip(data)
+  +b.number-tooltip&attributes(attributes)
+    +e.P.number
+      span!= data.number
+
+    +e.P.text!= data.text
+
+mixin ui-kit-number-tooltip()
+  +ui-section
+    +ui-section-head
+      +ui-title Подсказки для оффера
+      +ui-path
+        p Компонент: components/number-tooltip/number-tooltip
+
+    +ui-section-content()
+      +number-tooltip(getData('tooltips')[0])
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

@@ -15,6 +15,8 @@ import accordion from '../blocks/accordion/accordion';
 import '../blocks/rating/rating';
 import '../blocks/dropdown/dropdown';
 import putBlockIntoSlot from '../blocks/js-functions/put-block-into-slot';
+import {burgerMenuShow} from "../components/header/header";
+import {searchResults} from "../components/search-results/search-results";
 
 const $ = window.$;
 
@@ -36,5 +38,7 @@ $(() => {
   scrollAnimation();
   accordion();
   putBlockIntoSlot();
+  burgerMenuShow();
+  searchResults();
 });
 /* eslint-enable */

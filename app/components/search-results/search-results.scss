@@ -1,0 +1,47 @@
+.search-results {
+  display: block;
+
+  $b: &;
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.18);
+    position: relative;
+    z-index: 2;
+    transition: transform $ease-main;
+
+    @include rule(border-radius, (xl: 3px, lg: 0));
+    @include rule(padding, (xl: 0 45px 0 27px, lg: 0));
+    @include rule(margin, (lg: 0 -16px));
+
+    #{$b}.is-active & {
+      @include rule(transform, (xl: translate3d(0, 51px, 0), lg: none));
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include rule(display, (lg: none));
+  }
+
+  &__tabs {
+    margin-left: auto;
+
+    @include rule(width, (lg: 100%));
+  }
+
+  &__list {
+    @include rule(padding-top, (xl: 51px, lg: 31px));
+    @include rule(padding-bottom, (xl: 70px, lg: 51px));
+  }
+
+  &__map {
+    @include rule(margin-top, (xl: -64px, lg: 0));
+  }
+}

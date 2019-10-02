@@ -2,4 +2,8 @@
   display: block;
 
   $b: &;
+
+  .checkradio:not(:first-child) {
+    @include rule(margin-top, (xl: 24px, lg: 18px));
+  }
 }

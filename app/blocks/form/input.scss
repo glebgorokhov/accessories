@@ -1,14 +1,15 @@
 .input {
-  padding: 0 10px;
-  height: 40px;
-  border: 1px solid $color-border;
+  height: 55px;
+  border: 1px solid rgba($color-grey-8, .4);
   width: 100%;
   box-sizing: border-box;
-  font-size: 14px;
   line-height: 1;
-  border-radius: 0;
+  border-radius: 30px;
   min-height: 0;
-  background-color: white;
+  background-color: transparent;
+
+  @include rule(padding, (xl: 0 19px, lg: 0 13px));
+  @include rule(font-size, (xl: 18px, lg: 16px));
 }
 
 .textarea {
@@ -16,6 +17,6 @@
 
   padding-top: 13px;
   padding-bottom: 13px;
-  min-height: 150px;
-  resize: vertical;
+  min-height: 108px;
+  resize: none;
 }

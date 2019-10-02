@@ -1,0 +1,12 @@
+{
+  "buttons": [
+    {
+      "alt": "App Store",
+      "src": "assets/images/appstore.png"
+    },
+    {
+      "alt": "Google Play",
+      "src": "assets/images/googleplay.png"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 .checkradio {
   position: relative;
-  padding-left: 25px;
-  display: inline-block;
+  padding-left: 33px;
+  display: flex;
   cursor: pointer;
 
   &__input {
@@ -24,27 +24,38 @@
 
   &__box {
     position: absolute;
-    width: 15px;
-    height: 15px;
-    border: 1px solid $color-border;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba($color-grey-8, .4);
     left: 0;
-    top: 2px;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 6px;
 
     &::before {
       content: '';
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       background-color: $color-main;
       display: block;
       opacity: 0;
       transition: opacity $ease-main;
+      border-radius: 3px;
 
       @include center-image;
     }
   }
 
   &__content {
-    font-size: 14px;
-    line-height: 1.5;
+    @include rule(font-size, (xl: 14px, lg: 10px));
+
+    line-height: 18px;
+    color: $color-grey-7;
+    width: 100%;
+    margin-top: -3px;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }

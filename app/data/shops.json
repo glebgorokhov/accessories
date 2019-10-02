@@ -1,0 +1,44 @@
+[
+  [
+    {
+      "title": "ул. Молодежная, д. 5, корп. 3, стр. 4",
+      "mapButton": true,
+      "image": "assets/images/shops/mvideo.png"
+    },
+    {
+      "title": "Овчинниковская наб., д. 45, стр. 2",
+      "mapButton": true,
+      "image": "assets/images/shops/dns.png"
+    },
+    {
+      "title": "1-й Котляковский пер., д. 13",
+      "mapButton": true,
+      "image": "assets/images/shops/mvideo.png"
+    },
+    {
+      "title": "Воронцовская ул., д. 45, корп. 2, стр. 2",
+      "mapButton": true,
+      "image": "assets/images/shops/ulmart.png"
+    },
+    {
+      "title": "ул. Молодежная, д. 5, корп. 3, стр. 4",
+      "mapButton": true,
+      "image": "assets/images/shops/mvideo.png"
+    },
+    {
+      "title": "Овчинниковская наб., д. 45, стр. 2",
+      "mapButton": true,
+      "image": "assets/images/shops/dns.png"
+    },
+    {
+      "title": "1-й Котляковский пер., д. 13",
+      "mapButton": true,
+      "image": "assets/images/shops/mvideo.png"
+    },
+    {
+      "title": "Воронцовская ул., д. 45, корп. 2, стр. 2",
+      "mapButton": true,
+      "image": "assets/images/shops/ulmart.png"
+    }
+  ]
+]

@@ -1,0 +1,64 @@
+.search-offer {
+  display: block;
+
+  @include rule(padding-top, (xl: 78px, lg: 72px));
+  @include rule(padding-bottom, (xl: 69px, lg: 22px));
+
+  $b: &;
+
+  &__title {
+    @include rule(font-size, (xl: 24px, lg: 22px));
+    @include rule(padding-right, (xl: 210px, lg: 0));
+
+    line-height: 34px;
+    font-family: $font-second;
+    letter-spacing: 0.5px;
+
+    b {
+      font-weight: 800;
+      color: $color-main;
+
+      @include rule(font-size, (xl: 26px, lg: 22px));
+    }
+  }
+
+  &__text {
+    @include rule(font-size, (xl: 20px, lg: 16px));
+    @include rule(margin-top, (xl: 18px, lg: 20px));
+    @include rule(padding-right, (xl: 280px, lg: 0));
+
+    line-height: 24px;
+    display: flex;
+    font-family: $font-second;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 119px;
+      height: 74px;
+      background: url('../images/arrow.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 134px;
+      top: -24px;
+
+      @include rule(display, (lg: none));
+    }
+
+    &::before {
+      @include rule(margin-right, (xl: 21px, lg: 17px));
+      @include rule(width, (xl: 98px, lg: 50px));
+      @include rule(margin-top, (xl: 13px, lg: 11px));
+
+      content: '';
+      display: block;
+      height: 1px;
+      background: black;
+      flex-shrink: 0;
+    }
+  }
+
+  &__form {
+    @include rule(margin-top, (xl: 65px, lg: 35px));
+  }
+}

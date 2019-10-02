@@ -1,0 +1,20 @@
+mixin search-offer()
+  +b.search-offer&attributes(attributes)
+    .container
+      +e.H2.title <b>Все просто:</b> в строке поиска ниже введите название нужного вам аксессуара
+      +e.P.text и мы покажем в каких магазинах он доступен на данный момент
+      +search-form.__form
+
+mixin ui-kit-search-offer()
+  +ui-section
+    +ui-section-head
+      +ui-title Предложение поиска
+      +ui-path
+        p Компонент: components/search-offer/search-offer
+
+    +ui-section-content()
+      +search-offer
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

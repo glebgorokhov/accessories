@@ -18,3 +18,10 @@
 800 — Extra Bold, Ultra Bold
 900 — Black, Heavy
 */
+
+@include font-face('Calibri', normal, 300, 'CalibriLight');
+@include font-face('Calibri', normal, 400, 'Calibri');
+@include font-face('Calibri', normal, 700, 'CalibriBold');
+@include font-face('Montserrat', normal, 400, 'MontserratRegular');
+@include font-face('Montserrat', normal, 700, 'MontserratBold');
+@include font-face('Montserrat', normal, 800, 'MontserratExtraBold');

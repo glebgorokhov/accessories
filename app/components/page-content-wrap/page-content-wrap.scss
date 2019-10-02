@@ -1,0 +1,10 @@
+.page-content-wrap {
+  display: block;
+  transition: transform $ease-main;
+
+  $b: &;
+
+  &.is-active {
+    transform: translate3d(270px, 0, 0);
+  }
+}

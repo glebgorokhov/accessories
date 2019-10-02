@@ -1,0 +1,46 @@
+mixin footer()
+  +b.footer&attributes(attributes)
+    .container
+      +e.left
+        +e.A.logo(href="#")
+          img(src="assets/images/logo_white.svg" alt="Лого")
+
+        +e.buttons
+          each button in getData('footer').buttons
+            +e.A.button(href="#")
+              img(src=button.src alt=button.alt)
+
+      +e.right
+        +e.IMG.image(src="assets/images/footer_picture.png" alt="Картинка")
+        +e.IMG.arrow(src="assets/images/footer_arrow.svg" alt="Стрелка").hide-lg
+        +e.IMG.arrow(src="assets/images/footer_arrow_mobile.svg" alt="Стрелка").show-lg
+
+        +e.P.title Свяжитесь с нами
+        +form.__form
+          +grid
+            +col({xl: 6})
+              +input(type="text" name="name" placeholder="Имя")
+
+            +col({xl: 6})
+              +input(type="text" name="email" placeholder="E-mail")
+
+            +col({xl: 6})
+              +textarea(name="message" placeholder="Ваше сообщение")
+
+            +col({xl: 6})
+              +button('button')(type="button") Отправить
+              +checkradio(false, "agree", "agree", false, true) Я согласен с <a href="#">Политикой конфеденциальности</a>
+
+mixin ui-kit-footer()
+  +ui-section
+    +ui-section-head
+      +ui-title Footer
+      +ui-path
+        p Компонент: components/footer/footer
+
+    +ui-section-content(true)
+      +footer
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

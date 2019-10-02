@@ -1,0 +1,162 @@
+.header {
+  display: block;
+  position: relative;
+
+  @include rule(padding, (xl: 24px 0, lg: 15px 0));
+
+  $b: &;
+
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__logo {
+    img {
+      @include rule(width, (lg: 152px));
+    }
+  }
+
+  &__burger {
+    margin-left: auto;
+
+    @include screen('lg', min) {
+      display: block !important;
+    }
+
+    @include screen('lg') {
+      padding-top: 73px;
+      background: white;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      height: 100vh;
+      box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.250311);
+      width: 275px;
+      opacity: 0;
+      transition: opacity $ease-main;
+      display: none;
+
+      &.is-active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__menu {
+    @include rule(display, (xl: flex, lg: block));
+  }
+
+  &__close {
+    @include rule(display, (xl: none, lg: block));
+
+    position: absolute;
+    right: 11px;
+    top: 27px;
+    fill: $color-grey-2;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__item {
+    @include screen('lg') {
+      display: flex;
+      align-items: center;
+      border-top: 1px solid rgba($color-grey-3, .2);
+      padding: 20px 16px;
+
+      &:last-child {
+        border-bottom: 1px solid rgba($color-grey-3, .2);
+      }
+    }
+
+    &:not(:first-child) {
+      @include rule(margin-left, (xl: 51px, lg: 0));
+    }
+
+    svg {
+      @include rule(display, (xl: none, lg: block));
+
+      width: 29px;
+      height: 29px;
+      fill: $color-grey-1;
+      margin-right: 9px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__text {
+    @include rule(font-size, (xl: 18px, lg: 20px));
+    @include rule(line-height, (xl: 1, lg: 25px));
+    @include rule(color, (xl: $color-grey-4, lg: black));
+    @include rule(font-weight, (xl: 700, lg: 400));
+    @include rule(text-transform, (xl: uppercase, lg: none));
+
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      height: 4px;
+      width: 100%;
+      left: 0;
+      background: $color-main;
+      border-radius: 2px;
+
+      @include rule(display, (lg: none));
+    }
+  }
+
+  &__burger-button {
+    @include rule(display, (xl: none, lg: block));
+
+    width: 24px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+
+    &::before, &::after {
+      content: '';
+    }
+
+    span, &::before, &::after {
+      width: 100%;
+      height: 2px;
+      margin-top: -1px;
+      background-color: $color-main;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transition: transform $ease-main, background-color $ease-main, opacity $ease-main;
+      border-radius: 100px;
+    }
+
+    &::before {
+      transform: translate3d(0, -9px, 0);
+    }
+
+    &::after {
+      transform: translate3d(0, 9px, 0);
+    }
+
+    &.is-active {
+
+      &::before {
+        transform: translate3d(0, 0, 0) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate3d(0, 0, 0) rotate(45deg);
+      }
+
+      span {
+        transform: translate3d(-10px, 0, 0);
+        opacity: 0;
+      }
+    }
+  }
+}

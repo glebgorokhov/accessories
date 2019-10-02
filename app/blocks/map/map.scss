@@ -2,9 +2,10 @@
 
 .map {
   display: block;
-  height: 400px;
   position: relative;
   z-index: 1;
+
+  @include rule(height, (xl: 900px, lg: 550px));
 }
 
 .leaflet-control-layers-toggle {
