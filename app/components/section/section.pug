@@ -1,0 +1,21 @@
+mixin section()
+  +b.SECTION.section&attributes(attributes)
+    block
+
+mixin section-title(tag)
+  +e(tag || 'h2').title&attributes(attributes)
+    block
+
+mixin ui-kit-section()
+  +ui-section
+    +ui-section-head
+      +ui-title Секция
+      +ui-path
+        p Компонент: components/section/section
+
+    +ui-section-content()
+      +section
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

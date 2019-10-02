@@ -52,7 +52,6 @@ html, body {
   overflow-x: hidden; // Убираем горизонтальный скролл
   width: 100%;
   min-height: 100vh;
-  display: flex;
 }
 
 body {
@@ -60,7 +59,7 @@ body {
   font-size: 16px; // Убираем проблему с отступами между inline-элементами
   color: $color-basic;
   overflow: hidden;
-  flex-direction: column;
+  display: flex;
 }
 
 img {

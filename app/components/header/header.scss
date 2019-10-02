@@ -1,6 +1,7 @@
 .header {
   display: block;
   position: relative;
+  border-bottom: 1px solid rgba($color-grey-3, .15);
 
   @include rule(padding, (xl: 24px 0, lg: 15px 0));
 
@@ -20,13 +21,14 @@
 
   &__burger {
     margin-left: auto;
+    z-index: 1000;
 
     @include screen('lg', min) {
       display: block !important;
     }
 
     @include screen('lg') {
-      padding-top: 73px;
+      padding-top: 74px;
       background: white;
       position: absolute;
       right: 100%;

@@ -9,5 +9,10 @@
  * Так же доступа к блокам, которые собираются с помощью вебпака не будет.
  */
 
+@@include('../../node_modules/sticky-kit/dist/sticky-kit.min.js')
+
+$('.js-sticky').stick_in_parent({
+  "offset_top": 30,
+});
 
 /* eslint-enable */

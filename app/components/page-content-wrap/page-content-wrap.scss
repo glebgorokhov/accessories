@@ -1,6 +1,8 @@
 .page-content-wrap {
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: transform $ease-main;
+  width: 100%;
 
   $b: &;
 

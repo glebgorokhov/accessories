@@ -1,0 +1,15 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = projectName + ' | Категория'
+
+block content
+  +breadcrumbs([["Главная", "#"], ["Каталог", "#"], ["Пылесборники для пылесосов"]])
+  +shops-bar(true)
+  +section
+    .container
+      +section-title('h1')
+        span Каталог
+        +icon('filters').__filters.show-lg.js-open-filters
+      +search-form('Укажите название аксессуара или модель пылесоса')._margin-bottom_50
+      +category

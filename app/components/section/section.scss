@@ -1,0 +1,31 @@
+.section {
+  display: block;
+
+  @include rule(padding, (xl: 43px 0 170px, lg: 32px 0 54px));
+
+  $b: &;
+
+  &__title {
+    font-weight: 700;
+    align-items: center;
+
+    @include rule(margin-bottom, (xl: 26px, lg: 15px));
+    @include rule(line-height, (xl: 49px, lg: 37px));
+    @include rule(font-size, (xl: 40px, lg: 30px));
+    @include rule(text-align, (xl: center, lg: left));
+    @include rule(display, (xl: block, lg: flex));
+
+    span {
+      flex: 1;
+    }
+  }
+
+  &__filters {
+    margin-left: auto;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    fill: $color-dark-1;
+    cursor: pointer;
+  }
+}

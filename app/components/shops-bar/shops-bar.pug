@@ -1,0 +1,28 @@
+mixin shops-bar(active)
+  +b.shops-bar(class=(active ? 'is-active' : false))&attributes(attributes)
+    .container
+      +e.A.button(href="#popup-shops").js-fancybox
+        +e.button-wrap._choose
+          img(src="assets/images/choose-shop.svg" alt="Выбрать магазин")
+          span Магазин не выбран
+
+        +e.button-wrap._shop
+          img(src="assets/images/exchange.svg" alt="Поменять магазин")
+          span Москва, Садово-Спасская, 51
+
+      +e.IMG.logo(src="assets/images/shops/mvideo_empty.png" alt="МВидео")
+
+mixin ui-kit-shops-bar()
+  +ui-section
+    +ui-section-head
+      +ui-title Шапка в каталоге
+      +ui-path
+        p Компонент: components/shops-bar/shops-bar
+
+    +ui-section-content(true)
+      +shops-bar
+      +shops-bar(true)
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

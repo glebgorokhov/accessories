@@ -1,0 +1,78 @@
+.shops-bar {
+  display: flex;
+  background: $color-grey-11;
+  border-bottom: 1px solid rgba($color-grey-3, .2);
+  position: relative;
+  align-items: center;
+
+  @include rule(height, (xl: 97px, lg: 87px));
+
+  $b: &;
+
+  .container {
+
+  }
+
+  &__button {
+    display: block;
+
+    @include rule(max-width, (xl: calc(50% - 130px), lg: none));
+  }
+
+  &__button-wrap {
+    display: flex;
+    align-items: center;
+    transition: color $ease-main;
+
+    img {
+      @include rule(margin-right, (xl: 19px, lg: 26px));
+
+      flex-shrink: 0;
+    }
+
+    span {
+      @include rule(font-size, (xl: 24px, lg: 18px));
+
+      line-height: 30px;
+      font-weight: 300;
+    }
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &_choose {
+      color: $color-grey-2;
+
+      img {
+        position: relative;
+
+        @include rule(margin-right, (xl: 10px, lg: 6px));
+        @include rule(top, (xl: -5px, lg: -2px));
+      }
+
+      #{$b}.is-active & {
+        display: none;
+      }
+    }
+
+    &_shop {
+      img {
+        @include rule(width, (lg: 26px));
+      }
+
+      #{$b}:not(.is-active) & {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    @include center-image;
+
+    max-width: 220px;
+    max-height: 70px;
+
+    @include rule(display, (lg: none));
+  }
+}

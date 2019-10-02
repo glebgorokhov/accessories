@@ -1,0 +1,20 @@
+mixin categories(data)
+  +b.categories&attributes(attributes)
+    each item in data
+      +e.A.item(href="#")
+        +e.P.title!= item.title
+        +icon('arrow_right').__arrow
+
+mixin ui-kit-categories()
+  +ui-section
+    +ui-section-head
+      +ui-title Категории
+      +ui-path
+        p Компонент: components/categories/categories
+
+    +ui-section-content()
+      +categories(getData('categories'))
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

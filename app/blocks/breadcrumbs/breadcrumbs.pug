@@ -1,8 +1,9 @@
 mixin breadcrumbs(json)
-  +b.UL.breadcrumbs&attributes(attributes)
-    each crumb in json
-      +e.LI.item
-        +e.A.link(href='#')!= crumb
+  +b.breadcrumbs&attributes(attributes)
+    .container
+      each crumb in json
+        +e.item
+          +e(crumb[1] ? 'a' : 'p').link(href=(crumb[1] || false))!= crumb[0]
 
 mixin ui-kit-breadcrumbs
   +ui-section
@@ -11,8 +12,8 @@ mixin ui-kit-breadcrumbs
       +ui-path
         p Блок: blocks/breadcrumbs/breadcrumbs
 
-    +ui-section-content()
-      +breadcrumbs(['Главная', 'Раздел', 'Страница'])
+    +ui-section-content(true)
+      +breadcrumbs([["Главная", "#"], ["Каталог"]])
 
     //- При +ui-section-content(true) контейнер отсутствует
     //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()

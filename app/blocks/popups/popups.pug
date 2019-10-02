@@ -1,10 +1,14 @@
 mixin popups()
   +b.popups&attributes(attributes)
-    block
+    +popup-success
 
-mixin popup()
-  +b.popup&attributes(attributes)
-    block
+mixin popup-success()
+  +b.popup-success&attributes(attributes)#popup-success
+    .container
+      +icon('close')(data-fancybox-close="").__close
+      +e.IMG.like(src="assets/images/like.svg" alt="Like")
+      +e.H3.title Спасибо за обращение!
+      +e.P.text В ближайшее время вы&nbsp;получите ответ на&nbsp;указанный e-mail
 
 mixin ui-kit-popups
   +ui-section

@@ -17,6 +17,7 @@ import '../blocks/dropdown/dropdown';
 import putBlockIntoSlot from '../blocks/js-functions/put-block-into-slot';
 import {burgerMenuShow} from "../components/header/header";
 import {searchResults} from "../components/search-results/search-results";
+import {filters} from "../components/filters/filters";
 
 const $ = window.$;
 
@@ -40,5 +41,6 @@ $(() => {
   putBlockIntoSlot();
   burgerMenuShow();
   searchResults();
+  filters();
 });
 /* eslint-enable */

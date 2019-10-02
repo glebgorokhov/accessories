@@ -1,19 +1,31 @@
 .search-form {
   display: block;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.18);
-  background: white;
-  border-radius: 100px;
 
   $b: &;
 
-  &__title {
+  &_margin {
+    &-bottom {
+      &_50 {
+        @include rule(margin-bottom, (xl: 50px, lg: 32px));
+      }
+    }
+  }
 
+  &__title {
+    @include rule(font-size, (xl: 24px, lg: 20px));
+    @include rule(margin-bottom, (xl: 23px, lg: 20px));
+
+    line-height: 34px;
+    font-family: $font-second;
   }
 
   &__form {
     height: 64px;
     display: flex;
     position: relative;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.18);
+    background: white;
+    border-radius: 100px;
   }
 
   &__button {

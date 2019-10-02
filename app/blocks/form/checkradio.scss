@@ -3,6 +3,14 @@
   padding-left: 33px;
   display: flex;
   cursor: pointer;
+  min-height: 20px;
+
+  $b: &;
+
+  &_radio {
+    min-height: 22px;
+    padding-left: 34px;
+  }
 
   &__input {
     position: absolute;
@@ -44,6 +52,17 @@
 
       @include center-image;
     }
+
+    #{$b}_radio & {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid $color-grey-2;
+
+      &::before {
+        border-radius: 50%;
+      }
+    }
   }
 
   &__content {
@@ -53,6 +72,17 @@
     color: $color-grey-7;
     width: 100%;
     margin-top: -3px;
+
+    #{$b}_radio & {
+      color: $color-grey-6;
+      transition: color $ease-main;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    #{$b}_radio #{$b}__input:checked ~ & {
+      color: $color-main;
+    }
 
     a {
       text-decoration: underline;

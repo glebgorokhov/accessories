@@ -1,0 +1,25 @@
+mixin category()
+  +b.category&attributes(attributes)
+    +e.H2.title Пылесборники для пылесосов
+    +e.grid
+      +e.left
+        each item in getData('products')
+          +product-card(item).__product
+
+      +e.right.js-filters-block
+        +icon('close').__close.js-close-filters
+        +filters(getData('filters'))
+
+mixin ui-kit-category()
+  +ui-section
+    +ui-section-head
+      +ui-title Категория
+      +ui-path
+        p Компонент: components/category/category
+
+    +ui-section-content()
+      +category
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

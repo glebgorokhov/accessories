@@ -1,0 +1,71 @@
+.category {
+  display: block;
+
+  $b: &;
+
+  &__title {
+    @include rule(font-size, (xl: 34px, lg: 26px));
+    @include rule(line-height, (xl: 42px, lg: 32px));
+  }
+
+  &__grid {
+    display: flex;
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 50px, lg: 39px));
+    }
+  }
+
+  &__left {
+    flex: 1;
+  }
+
+  &__right {
+    flex-shrink: 0;
+
+    @include rule(width, (xl: 193px, lg: 270px));
+    @include rule(margin-left, (xl: 66px, lg: 0));
+    @include rule(position, (lg: fixed));
+    @include rule(top, (lg: 0));
+    @include rule(bottom, (lg: 0));
+    @include rule(right, (lg: 100%));
+    @include rule(background, (lg: white));
+    @include rule(box-shadow, (lg: 0px 5px 30px rgba(0, 0, 0, 0.250311)));
+    @include rule(box-sizing, (lg: border-box));
+    @include rule(padding, (lg: 42px 16px 30px));
+    @include rule(z-index, (lg: 100));
+    @include rule(opacity, (lg: 0));
+    @include rule(display, (lg: none));
+
+    @include screen('lg', min) {
+      display: block !important;
+    }
+
+    @include screen('lg') {
+      transition: opacity $ease-main;
+      pointer-events: none;
+      overflow: auto;
+
+      &.is-active {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__close {
+    @include rule(display, (xl: none, lg: block));
+
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 11px;
+    top: 28px;
+    fill: $color-grey-2;
+    cursor: pointer;
+  }
+
+  &__product {
+
+  }
+}

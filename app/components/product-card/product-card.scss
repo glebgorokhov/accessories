@@ -1,0 +1,126 @@
+.product-card {
+  display: flex;
+  border-top: 1px solid rgba($color-grey-3, .2);
+  position: relative;
+
+  @include rule(padding, (xl: 28px 0, lg: 11px 90px 13px 0));
+
+  $b: &;
+
+  &:last-child {
+    border-bottom: 1px solid rgba($color-grey-3, .2);
+  }
+
+  &__image {
+    width: 150px;
+    margin-right: 43px;
+    text-align: center;
+    font-size: 0;
+
+    @include rule(display, (lg: none));
+
+    img {
+      max-width: 100%;
+      max-height: 150px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+
+    @include rule(display, (lg: flex));
+    @include rule(flex-direction, (lg: column));
+  }
+
+  &__category {
+    @include rule(font-size, (xl: 18px, lg: 16px));
+
+    line-height: 1.5;
+    color: $color-main;
+    font-weight: 300;
+  }
+
+  &__title {
+    @include rule(font-size, (xl: 18px, lg: 17px));
+    @include rule(line-height, (xl: 1.5, lg: 30px));
+    @include rule(order, (lg: -1));
+    @include rule(text-transform, (xl: uppercase, lg: none));
+
+    text-decoration: underline;
+    display: block;
+    transition: color $ease-main;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 6px, lg: 0));
+      @include rule(margin-bottom, (lg: 4px));
+    }
+  }
+
+  &__components {
+    @include rule(display, (lg: none));
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__component {
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-grey-6;
+
+    &:not(:first-child) {
+      margin-top: 1px;
+    }
+  }
+
+  &__right {
+    @include rule(width, (xl: 204px, lg: auto));
+    @include rule(margin-left, (xl: 40px, lg: 0));
+    @include rule(position, (lg: absolute));
+    @include rule(right, (lg: 0));
+    @include rule(top, (lg: 18px));
+    @include rule(padding-top, (xl: 3px, lg: 0));
+  }
+
+  &__price {
+    @include rule(font-size, (xl: 26px, lg: 22px));
+
+    line-height: 1;
+    font-family: $font-second;
+    font-weight: 700;
+  }
+
+  &__map-button {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1;
+    text-decoration: underline;
+    color: $color-grey-6;
+    fill: $color-main;
+    transition: color $ease-main;
+    font-weight: 300;
+
+    @include rule(display, (lg: none));
+
+    &:hover {
+      color: $color-main;
+    }
+
+    svg {
+      margin-right: 10px;
+      flex-shrink: 0;
+      width: 25px;
+      height: 32px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 13px;
+    }
+  }
+}

@@ -1,40 +1,35 @@
-$breadpadding: 35px;
-
 .breadcrumbs {
-  display: block;
+  @include rule(display, (xl: block, lg: none));
+
+  padding: 26px 0;
+
+  $b: &;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__item {
-    display: inline-block;
+    display: block;
     position: relative;
+    font-size: 18px;
+    line-height: 1;
+    color: $color-grey-10;
 
     &:not(:last-child) {
-      padding-right: $breadpadding;
-
       &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        right: $breadpadding/2;
-        width: 5px;
-        height: 5px;
-        border-width: 1px 1px 0 0;
-        border-style: solid;
-        border-color: $color-basic;
-        transform-origin: center;
-        transform: translateX(50%) rotate(45deg);
+        content: '\00a0-\00a0';
       }
     }
 
-    &:last-child {
-      pointer-events: none;
-      opacity: .5;
-    }
-  }
+    a {
+      transition: color $ease-main;
+      text-decoration: underline;
 
-  &__link {
-    font-size: 14px;
-    line-height: 1.5;
+      &:hover {
+        color: $color-main;
+      }
+    }
   }
 }

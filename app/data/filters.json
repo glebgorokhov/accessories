@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Тип",
+    "items": [
+      {
+        "name": "type",
+        "value": "type1",
+        "checked": true,
+        "text": "пылесборник"
+      },
+      {
+        "name": "type",
+        "value": "type2",
+        "checked": false,
+        "text": "фильтр"
+      },
+      {
+        "name": "type",
+        "value": "type3",
+        "checked": false,
+        "text": "насадка"
+      },
+      {
+        "name": "type",
+        "value": "type4",
+        "checked": false,
+        "text": "запчасть"
+      },
+      {
+        "name": "type",
+        "value": "type5",
+        "checked": false,
+        "text": "аккумулятор"
+      }
+    ]
+  },
+  {
+    "title": "Производитель",
+    "items": [
+      {
+        "name": "manufacturer",
+        "value": "manufacturer1",
+        "checked": true,
+        "text": "Bosch"
+      },
+      {
+        "name": "manufacturer",
+        "value": "manufacturer2",
+        "checked": false,
+        "text": "Samsung"
+      },
+      {
+        "name": "manufacturer",
+        "value": "manufacturer3",
+        "checked": false,
+        "text": "LG"
+      },
+      {
+        "name": "manufacturer",
+        "value": "manufacturer4",
+        "checked": false,
+        "text": "Dyson"
+      },
+      {
+        "name": "manufacturer",
+        "value": "manufacturer5",
+        "checked": false,
+        "text": "Phillips"
+      }
+    ]
+  }
+]

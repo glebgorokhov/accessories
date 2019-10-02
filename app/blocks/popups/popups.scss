@@ -7,3 +7,19 @@
 .fancybox-close-small:focus::after { outline: none; }
 
 .fancybox-enabled { overflow: initial; }
+
+.fancybox-bg {
+  background: black;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .7;
+}
+
+.fancybox-slide--html {
+  @include rule(padding, (xl: 44px, lg: 0));
+}
+
+.fancybox-close-small {
+  display: none;
+}

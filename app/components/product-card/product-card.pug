@@ -1,0 +1,31 @@
+mixin product-card(data)
+  +b.product-card&attributes(attributes)
+    +e.image
+      img(src=data.image, alt=data.title)
+
+    +e.info
+      +e.P.category!= data.category
+      +e.A.title(href="#")!= data.title
+      +e.UL.components
+        each item in data.components
+          +e.LI.component!= item
+
+    +e.right
+      +e.P.price!= data.price
+      +e.A.map-button(href="#")
+        +icon('shops')
+        span Показать на карте
+
+mixin ui-kit-product-card()
+  +ui-section
+    +ui-section-head
+      +ui-title Карточка товара
+      +ui-path
+        p Компонент: components/product-card/product-card
+
+    +ui-section-content()
+      +product-card(getData('products')[0])
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

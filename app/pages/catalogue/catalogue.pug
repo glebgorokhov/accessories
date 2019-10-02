@@ -1,0 +1,12 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = projectName + ' | Каталог'
+
+block content
+  +breadcrumbs([["Главная", "#"], ["Каталог"]])
+  +shops-bar()
+  +section
+    .container
+      +search-form('Укажите название аксессуара или модель пылесоса')._margin-bottom_50
+      +categories(getData('categories'))

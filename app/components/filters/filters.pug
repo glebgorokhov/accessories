@@ -1,0 +1,23 @@
+mixin filters(data)
+  +b.filters.js-sticky&attributes(attributes)
+    each section in data
+      +e.section
+        +e.P.title!= section.title
+        +e.items
+          each item in section.items
+            +e.item
+              +checkradio(true, item.name, item.value, item.checked, false)._radio!= item.text
+
+mixin ui-kit-filters()
+  +ui-section
+    +ui-section-head
+      +ui-title Фильтры
+      +ui-path
+        p Компонент: components/filters/filters
+
+    +ui-section-content()
+      +filters(getData('filters'))
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()
