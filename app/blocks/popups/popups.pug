@@ -1,6 +1,7 @@
 mixin popups()
   +b.popups&attributes(attributes)
     +popup-success
+    +popup-shops
 
 mixin popup-success()
   +b.popup-success&attributes(attributes)#popup-success
@@ -9,6 +10,23 @@ mixin popup-success()
       +e.IMG.like(src="assets/images/like.svg" alt="Like")
       +e.H3.title Спасибо за обращение!
       +e.P.text В ближайшее время вы&nbsp;получите ответ на&nbsp;указанный e-mail
+
+mixin popup-shops()
+  +b.popup-shops&attributes(attributes)#popup-shops
+    +icon('close')(data-fancybox-close="").__close
+
+    +e.top
+      .container
+        +e.P.title Адреса магазинов в городе:
+        +e.content
+          +e.FORM.form(action="#" method="post")
+            +e.INPUT.input(name="city" type="text" value="Зеленоград").js-input-with-remove
+            +icon('close').__clear-input.js-clear-input
+
+    +e.bottom
+      .container
+        +shops(getData('shops')[1], true)._popup.__shops
+
 
 mixin ui-kit-popups
   +ui-section

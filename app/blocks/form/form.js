@@ -13,6 +13,32 @@ import Inputmask from 'inputmask';
 
 const $ = window.$;
 
+export function inputClear () {
+  function inputRemoveButton () {
+    $(document).find('.js-input-with-remove').each(function () {
+      const input = $(this);
+
+      input.val().length > 0
+        ? input.next('.js-clear-input').addClass('is-active')
+        : input.next('.js-clear-input').removeClass('is-active');
+    });
+  }
+
+  inputRemoveButton();
+
+  $(document).on('keyup change', '.js-input-with-remove', function () {
+    const input = $(this);
+
+    input.val().length > 0
+      ? input.next('.js-clear-input').addClass('is-active')
+      : input.next('.js-clear-input').removeClass('is-active');
+  });
+
+  $(document).on('click', '.js-clear-input', function () {
+    $(this).prev('input').val('').change().focus();
+  });
+}
+
 export function selects() {
   if ($('.js-select').length) {
     const choices = new Choices('.js-select', {

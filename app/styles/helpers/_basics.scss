@@ -114,3 +114,7 @@ select, input, textarea, button {
   background-color: transparent;
   font-family: $font-main;
 }
+
+*::-ms-clear {
+  display: none;
+}

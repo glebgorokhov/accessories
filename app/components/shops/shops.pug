@@ -1,7 +1,7 @@
-mixin shops(data)
+mixin shops(data, isClickable)
   +b.shops&attributes(attributes)
     each item in data
-      +e.item
+      +e.item(class=(isClickable ? 'js-select-shop' : false))
         +e.P.title!= item.title
 
         if item.mapButton

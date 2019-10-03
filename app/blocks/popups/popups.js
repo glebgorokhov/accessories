@@ -1,3 +1,4 @@
+/* eslint-disable */
 // http://fancyapps.com/fancybox/3/
 import '@fancyapps/fancybox';
 
@@ -12,3 +13,4 @@ export default function popups() {
     touch: false,
   });
 }
+/* eslint-enable */

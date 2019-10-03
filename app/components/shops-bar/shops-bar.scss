@@ -4,8 +4,11 @@
   border-bottom: 1px solid rgba($color-grey-3, .2);
   position: relative;
   align-items: center;
+  box-sizing: border-box;
+  padding: 10px 0;
 
-  @include rule(height, (xl: 97px, lg: 87px));
+  @include rule(height, (xl: 97px, lg: auto));
+  @include rule(min-height, (lg: 87px));
 
   $b: &;
 

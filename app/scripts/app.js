@@ -18,6 +18,8 @@ import putBlockIntoSlot from '../blocks/js-functions/put-block-into-slot';
 import {burgerMenuShow} from "../components/header/header";
 import {searchResults} from "../components/search-results/search-results";
 import {filters} from "../components/filters/filters";
+import {inputClear} from "../blocks/form/form";
+import {shops} from "../components/shops/shops";
 
 const $ = window.$;
 
@@ -42,5 +44,7 @@ $(() => {
   burgerMenuShow();
   searchResults();
   filters();
+  inputClear();
+  shops();
 });
 /* eslint-enable */

@@ -1,0 +1,112 @@
+.popup-shops {
+  display: block;
+  background: white;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+
+  @include rule(width, (xl: 1007px, lg: 100%));
+  @include rule(height, (lg: 100%));
+  @include rule(overflow, (lg: auto));
+
+  $b: &;
+
+  .container {
+    @include screen('lg', min) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+
+    @include rule(width, (xl: 26px, lg: 20px));
+    @include rule(height, (xl: 26px, lg: 20px));
+    @include rule(right, (xl: 30px, lg: 16px));
+    @include rule(top, (xl: 18px, lg: 16px));
+
+    fill: $color-main;
+    transition: fill $ease-main;
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover {
+      fill: $color-main-light;
+    }
+  }
+
+  &__top {
+    background: $color-grey-11;
+    border-bottom: 1px solid rgba($color-grey-3, .2);
+
+    @include rule(padding, (xl: 26px 0 18px, lg: 28px 0 18px));
+  }
+
+  &__title {
+    @include rule(font-size, (xl: 17px, lg: 14px));
+
+    color: $color-grey-6;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  &__content {
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 14px, lg: 12px));
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    @include rule(width, (xl: 324px, lg: 100%));
+  }
+
+  &__input {
+    @include rule(font-size, (xl: 20px, lg: 18px));
+    @include rule(height, (xl: 53px, lg: 49px));
+
+    width: 100%;
+    border-radius: 100px;
+    border: 0;
+    background: $color-grey-12;
+    color: $color-main;
+    padding: 0 50px 4px 25px;
+    font-weight: 300;
+    line-height: 1;
+    box-sizing: border-box;
+  }
+
+  &__clear-input {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    fill: $color-grey-6;
+    right: 26px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: fill $ease-main, opacity $ease-main;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+
+    &.is-active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &:hover {
+      fill: $color-main;
+    }
+  }
+
+  &__bottom {
+    @include rule(padding, (xl: 32px 0 62px, lg: 29px 0 37px));
+  }
+
+  &__shops {
+
+  }
+}
