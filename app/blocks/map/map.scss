@@ -1,4 +1,75 @@
 @import '../../node_modules/leaflet/dist/leaflet.css';
+@import '../../node_modules/leaflet.markercluster/dist/MarkerCluster.css';
+@import '../../node_modules/leaflet.markercluster/dist/MarkerCluster.Default.css';
+@import '../../node_modules/leaflet.locatecontrol/dist/L.Control.Locate.min.css';
+@import '../../node_modules/leaflet.locatecontrol/dist/L.Control.Locate.mapbox.css';
+
+// Clusters
+
+.marker-cluster {
+  @include rule(width, (xl: 76px !important, lg: 44px !important));
+  @include rule(height, (xl: 76px !important, lg: 44px !important));
+
+  background: #323E6F;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  @include rule(margin-top, (xl: -38px !important, lg: -22px !important));
+  @include rule(margin-left, (xl: -38px !important, lg: -22px !important));
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    background: transparent;
+    font-family: $font-main;
+
+    @include rule(font-size, (xl: 32px, lg: 21px));
+
+    line-height: 1;
+    text-align: center;
+    color: white;
+    margin: 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+  }
+}
+
+.marker-icon {
+  @include rule(width, (xl: 36px, lg: 25px));
+  @include rule(height, (xl: 36px, lg: 25px));
+
+  background: #323E6F;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    display: block;
+
+    @include rule(width, (xl: 16px, lg: 11px));
+    @include rule(height, (xl: 16px, lg: 11px));
+
+    border-radius: 50%;
+    background: white;
+  }
+
+  &_false {
+    background: #B4B4B4;
+  }
+}
+
+.leaflet-div-icon {
+  border: 0;
+  background: transparent;
+}
+
+//
 
 .map {
   display: block;
@@ -44,13 +115,162 @@
 }
 
 .leaflet-popup-content-wrapper {
-  border-radius: 3px;
+  background: white;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.250311);
+  padding: 0;
+
+  @include rule(border-radius, (xl: 10px, lg: 6px));
 }
 
 .leaflet-popup-content {
   margin: 0;
-  padding: 13px 20px;
-  font-size: 14px;
+  padding: 0;
+  font-size: 0;
+  font-family: $font-main;
+  @include rule(width, (xl: 476px !important, lg: 286px !important));
 }
 
 .leaflet-container .leaflet-control-attribution { display: none; }
+
+.map-popup {
+  width: 100%;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include rule(padding, (xl: 24px 29px, lg: 15px 18px));
+  }
+
+  &__address {
+    flex: 1;
+
+    @include rule(font-size, (xl: 28px, lg: 17px));
+    @include rule(line-height, (xl: 35px, lg: 21px));
+
+    margin: 0 !important;
+    word-break: break-word;
+  }
+
+  &__image {
+    padding-left: 20px;
+    flex-shrink: 0;
+
+    img {
+      @include rule(max-width, (xl: 106px, lg: 64px));
+      @include rule(max-height, (xl: 80px, lg: 64px));
+    }
+  }
+
+  &__button {
+    @include rule(height, (xl: 79px, lg: 47px));
+    @include rule(line-height, (xl: 79px, lg: 47px));
+    @include rule(font-size, (xl: 28px, lg: 17px));
+
+    border-top: 1px solid rgba($color-grey-3, .2);
+    text-align: center;
+    cursor: pointer;
+    color: $color-main !important;
+    transition: color $ease-main;
+    display: block;
+    width: 100%;
+
+    &:hover {
+      color: $color-main-light !important;
+    }
+  }
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  display: none;
+}
+
+.leaflet-popup-tip-container {
+  @include rule(width, (xl: 44px, lg: 26px));
+  @include rule(height, (lg: 12px));
+  @include rule(margin-left, (xl: -22px, lg: -13px));
+}
+
+.leaflet-popup-tip {
+  box-shadow: none !important;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: -16px auto 0;
+
+  @include screen('lg') {
+    width: 17px;
+    height: 17px;
+    padding: 0;
+    margin: -9px auto 0;
+  }
+}
+
+// Geo
+
+.leaflet-top.leaflet-left {
+  display: none;
+}
+
+.leaflet-right .leaflet-control {
+  margin-right: 40px;
+}
+
+.leaflet-bottom .leaflet-control {
+  margin-bottom: 40px;
+}
+
+.leaflet-touch .leaflet-bar {
+  border: 0;
+  box-shadow: none;
+}
+
+.leaflet-control-locate {
+  width: 84px;
+  height: 84px;
+
+  > a.leaflet-bar-part:first-child {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.247792);
+    background-image: url('../images/locate.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.leaflet-pane>svg path.leaflet-interactive {
+  fill: rgba(#59A855, .1);
+  fill-opacity: 1;
+}
+
+.leaflet-marker-icon.leaflet-control-locate-location {
+  @include rule(width, (xl: 66px !important, lg: 34px !important));
+  @include rule(height, (xl: 66px !important, lg: 34px !important));
+  @include rule(margin-left, (xl: -33px !important, lg: -17px !important));
+  @include rule(margin-top, (xl: -33px !important, lg: -17px !important));
+
+  background-position: center;
+  background-color: $color-main;
+  background-image: url('../images/position.svg');
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.247792);
+
+  @include rule(background-size, (lg: 13px));
+
+  svg {
+    display: none;
+  }
+}
