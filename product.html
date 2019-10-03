@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Аксессуары | Главная</title>
+    <title>Аксессуары | Страница товара</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
@@ -38,37 +38,57 @@
             </div>
         </div>
         <main class="main" role="main">
-            <div class="offer">
+            <div class="breadcrumbs">
                 <div class="container">
-                    <div class="offer__left">
-                        <h1 class="offer__title">Нужен пылесборник для пылесоса?</h1>
-                        <div class="offer__texts">
-                            <p class="offer__text">Проверьте наличие нужных вам аксессуаров в магазинах вашего города!</p>
-                        </div>
-                    </div>
-                    <div class="offer__right"><img class="offer__picture" src="assets/images/cleaner.png" alt="Пылесос" title="" />
-                        <div class="number-tooltip offer__tooltip offer__tooltip_1">
-                            <p class="number-tooltip__number"><span>01</span></p>
-                            <p class="number-tooltip__text">Введите название нужного аксессуара</p>
-                        </div>
-                        <div class="number-tooltip offer__tooltip offer__tooltip_2">
-                            <p class="number-tooltip__number"><span>02</span></p>
-                            <p class="number-tooltip__text">Выберите удобный вам магазин</p>
-                        </div>
-                    </div>
-                    <div class="offer__lines">
-                        <div class="offer__line offer__line_1"></div>
-                        <div class="offer__line offer__line_2"></div>
-                        <div class="offer__line-text"><span>Всего два шага</span></div>
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></div>
+                    <div class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a></div>
+                    <div class="breadcrumbs__item">
+                        <p class="breadcrumbs__link">Пылесборник Menolux 2000 Х700 T1000</p>
                     </div>
                 </div>
             </div>
-            <div class="search-offer">
+            <div class="product">
                 <div class="container">
-                    <h2 class="search-offer__title"><b>Все просто:</b> в строке поиска ниже введите название нужного вам аксессуара</h2>
-                    <p class="search-offer__text">и мы покажем в каких магазинах он доступен на данный момент</p>
-                    <div class="search-form search-offer__form">
-                        <form class="search-form__form" action="#" method="post"><input class="search-form__input" name="text" type="text" placeholder="Пылесборник Menalux 200" /><button class="button search-form__button" type="submit">Искать</button><svg class="search-form__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg></form>
+                    <div class="product__left">
+                        <div class="slider js-slider">
+                            <div class="slider__top swiper-container js-slider-top">
+                                <div class="swiper-wrapper">
+                                    <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                                    <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                                    <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                                </div>
+                            </div>
+                            <div class="slider__bottom swiper-container js-slider-bottom">
+                                <div class="swiper-wrapper">
+                                    <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                                    <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                                    <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__right">
+                        <h1 class="product__title">Пылесборник Menalux 2000 Х700 T1000</h1>
+                        <p class="product__subtitle">Для пылесосов Bosch</p>
+                        <div class="product__prices">
+                            <p class="product__price">390 ₽</p><a class="button button_big product__button js-anchor" href="#results">Где купить?</a>
+                        </div>
+                        <div class="product__info">
+                            <p class="product__info-title">Дополнительная информация:</p>
+                            <div class="product__description">
+                                <p>Пылесборник Menalux 2000 для пылесосов Bosch моделей BSG32, BDS1347, VC75, GR56, OP315. Плотный синтетический материал, закрывание. Отверстия для переноски заполненного пылесборника.</p>
+                            </div>
+                            <ul class="product__items">
+                                <li class="product__item">
+                                    <p class="product__item-title">МОТОРНЫЙ ФИЛЬТР</p>
+                                    <p class="product__item-text">В комплект входит моторный фильтр, обеспечивающий эффективную фильтрацию воздуха. Благодаря этому мелкая пыль, попавшая внутрь пылесоса, не будет возвращаться обратно в помещение.</p>
+                                </li>
+                                <li class="product__item">
+                                    <p class="product__item-title">ПЫЛЕСБОРНИК ИЗ ПРОЧНОГО МАТЕРИАЛА</p>
+                                    <p class="product__item-text">Материал, из которого изготовлен мешок, сложно порвать или поцарапать. Благодаря этому пылесборник не порвётся под весом собранного в нём мусора, также в него можно собирать мелкие камешки и стекло.</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

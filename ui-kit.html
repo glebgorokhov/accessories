@@ -309,26 +309,24 @@
                     <div class="ui-kit__blockpath">
                         <p>Блок: blocks/slider/slider</p>
                     </div>
-                    <div class="ui-kit__description">
-                        <p><a href="https://idangero.us/swiper/api/" target="_blank">Документация</a></p>
-                    </div>
                 </div>
             </div>
             <div class="ui-kit__section-content">
                 <div class="container">
-                    <div class="slider swiper-container js-slider">
-                        <div class="swiper-wrapper">
-                            <div class="slider__slide swiper-slide">Привет</div>
-                            <div class="slider__slide swiper-slide">Привет</div>
-                            <div class="slider__slide swiper-slide">Привет</div>
-                            <div class="slider__slide swiper-slide">Привет</div>
+                    <div class="slider js-slider">
+                        <div class="slider__top swiper-container js-slider-top">
+                            <div class="swiper-wrapper">
+                                <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                                <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                                <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                            </div>
                         </div>
-                        <div class="slider__dots">
-                            <div class="slider__dot"></div>
-                        </div>
-                        <div class="slider__navigation">
-                            <div class="slider__button slider__button_prev"></div>
-                            <div class="slider__button slider__button_next"></div>
+                        <div class="slider__bottom swiper-container js-slider-bottom">
+                            <div class="swiper-wrapper">
+                                <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                                <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                                <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1191,6 +1189,65 @@
                         </div>
                         <div class="product-card__right">
                             <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui-kit__section">
+            <div class="ui-kit__section-head">
+                <div class="container">
+                    <h2 class="ui-kit__title">Блок с описанием товара</h2>
+                    <div class="ui-kit__blockpath">
+                        <p>Компонент: components/product/product</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-kit__section-content">
+                <div class="container">
+                    <div class="product">
+                        <div class="container">
+                            <div class="product__left">
+                                <div class="slider js-slider">
+                                    <div class="slider__top swiper-container js-slider-top">
+                                        <div class="swiper-wrapper">
+                                            <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                                            <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                                            <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
+                                        </div>
+                                    </div>
+                                    <div class="slider__bottom swiper-container js-slider-bottom">
+                                        <div class="swiper-wrapper">
+                                            <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                                            <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                                            <div class="slider__bottom-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__right">
+                                <h1 class="product__title">Пылесборник Menalux 2000 Х700 T1000</h1>
+                                <p class="product__subtitle">Для пылесосов Bosch</p>
+                                <div class="product__prices">
+                                    <p class="product__price">390 ₽</p><a class="button button_big product__button js-anchor" href="#results">Где купить?</a>
+                                </div>
+                                <div class="product__info">
+                                    <p class="product__info-title">Дополнительная информация:</p>
+                                    <div class="product__description">
+                                        <p>Пылесборник Menalux 2000 для пылесосов Bosch моделей BSG32, BDS1347, VC75, GR56, OP315. Плотный синтетический материал, закрывание. Отверстия для переноски заполненного пылесборника.</p>
+                                    </div>
+                                    <ul class="product__items">
+                                        <li class="product__item">
+                                            <p class="product__item-title">МОТОРНЫЙ ФИЛЬТР</p>
+                                            <p class="product__item-text">В комплект входит моторный фильтр, обеспечивающий эффективную фильтрацию воздуха. Благодаря этому мелкая пыль, попавшая внутрь пылесоса, не будет возвращаться обратно в помещение.</p>
+                                        </li>
+                                        <li class="product__item">
+                                            <p class="product__item-title">ПЫЛЕСБОРНИК ИЗ ПРОЧНОГО МАТЕРИАЛА</p>
+                                            <p class="product__item-text">Материал, из которого изготовлен мешок, сложно порвать или поцарапать. Благодаря этому пылесборник не порвётся под весом собранного в нём мусора, также в него можно собирать мелкие камешки и стекло.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
