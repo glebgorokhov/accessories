@@ -1,0 +1,38 @@
+mixin product()
+  +b.product&attributes(attributes)
+    .container
+      +e.left
+        +slider
+
+      +e.right
+        +e.H1.title Пылесборник Menalux 2000 Х700 T1000
+        +e.P.subtitle Для пылесосов Bosch
+
+        +e.prices
+          +e.P.price 390 ₽
+          +button()(href="#results")._big.__button.js-anchor Где купить?
+
+        +e.info
+          +e.P.info-title Дополнительная информация:
+          +e.description
+            p Пылесборник Menalux 2000 для пылесосов Bosch моделей BSG32, BDS1347, VC75, GR56, OP315. Плотный синтетический материал, закрывание. Отверстия для переноски заполненного пылесборника.
+
+          +e.UL.items
+            each item in getData('product-info')
+              +e.LI.item
+                +e.P.item-title!= item.title
+                +e.P.item-text!= item.text
+
+mixin ui-kit-product()
+  +ui-section
+    +ui-section-head
+      +ui-title Блок с описанием товара
+      +ui-path
+        p Компонент: components/product/product
+
+    +ui-section-content()
+      +product
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

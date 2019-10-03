@@ -1,0 +1,151 @@
+.product {
+  display: block;
+
+  @include rule(padding, (xl: 25px 0 57px, lg: 36px 0 30px));
+  @include rule(position, (lg: relative));
+
+  $b: &;
+
+  .container {
+    @include rule(display, (xl: flex, lg: block));
+  }
+
+  &__left {
+    flex-shrink: 0;
+
+    @include rule(width, (xl: 502px, lg: auto));
+    @include rule(padding-right, (xl: 66px, lg: 0));
+    @include rule(padding-top, (xl: 12px, lg: 0));
+    @include rule(position, (lg: absolute));
+    @include rule(left, (lg: 16px));
+    @include rule(top, (lg: 95px));
+  }
+
+  &__right {
+    flex: 1;
+  }
+
+  &__title {
+    @include rule(font-size, (xl: 32px, lg: 20px));
+    @include rule(line-height, (xl: 40px, lg: 1));
+    @include rule(padding-left, (lg: 35px));
+    @include rule(position, (lg: relative));
+    @include rule(font-family, (xl: $font-second, lg: $font-main));
+    @include rule(box-sizing, (lg: border-box));
+    @include rule(padding-bottom, (lg: 2px));
+
+    @include screen('lg') {
+      text-overflow: ellipsis;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        background-image: url('../images/back.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__subtitle {
+    @include rule(font-size, (xl: 20px, lg: 16px));
+    @include rule(padding-left, (lg: 138px));
+
+    line-height: 1.5;
+    color: $color-main;
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 4px, lg: 51px));
+    }
+  }
+
+  &__prices {
+    @include rule(display, (xl: flex, lg: block));
+
+    align-items: center;
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 21px, lg: 4px));
+    }
+  }
+
+  &__price {
+    font-family: $font-second;
+    font-weight: 700;
+    line-height: 1;
+
+    @include rule(font-size, (xl: 36px, lg: 22px));
+    @include rule(width, (xl: 290px, lg: auto));
+    @include rule(padding-left, (lg: 138px));
+  }
+
+  &__button {
+    @include rule(min-width, (xl: 295px, lg: 0));
+    @include rule(width, (lg: 100%));
+    @include rule(margin-top, (lg: 75px));
+  }
+
+  &__info {
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 40px, lg: 35px));
+    }
+  }
+
+  &__info-title {
+    @include rule(font-size, (xl: 24px, lg: 22px));
+    @include rule(line-height, (xl: 35px, lg: 20px));
+    @include rule(border-bottom, (lg: 2px dashed $color-main));
+    @include rule(display, (lg: inline-block));
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 4px, lg: 12px));
+    }
+  }
+
+  &__items {
+    @include rule(padding-left, (xl: 30px, lg: 0));
+    @include rule(padding-top, (lg: 15px));
+    @include rule(border-left, (xl: 1px solid rgba($color-grey-3, .2), lg: 0));
+    @include rule(border-top, (lg: 1px solid rgba($color-grey-3, .2)));
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 30px, lg: 13px));
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+
+    @include rule(line-height, (xl: 30px, lg: 26px));
+
+    &:not(:first-child) {
+      @include rule(margin-top, (xl: 12px, lg: 20px));
+    }
+  }
+
+  &__item-title {
+    text-transform: uppercase;
+  }
+
+  &__item-text {
+    font-weight: 300;
+    line-height: 30px;
+
+    &:not(:first-child) {
+      @include rule(margin-top, (lg: 3px));
+    }
+  }
+}

@@ -13,7 +13,6 @@ export function freeze() {
 
     h.css({
       width: '100%',
-      height: '100%',
       position: 'fixed',
       top: -top,
     });
@@ -30,7 +29,6 @@ export function unfreeze() {
     h.css({
       position: '',
       width: '',
-      height: '',
       top: '',
       'overflow-y': '',
     });

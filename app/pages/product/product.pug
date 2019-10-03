@@ -1,0 +1,9 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = projectName + ' | Страница товара'
+
+block content
+  +breadcrumbs([["Главная", "#"], ["Каталог", "#"], ["Пылесборник Menolux 2000 Х700 T1000"]])
+  +product
+  +search-results
