@@ -315,11 +315,7 @@
                 <div class="container">
                     <div class="slider js-slider">
                         <div class="slider__top swiper-container js-slider-top">
-                            <div class="swiper-wrapper">
-                                <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
-                                <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
-                                <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
-                            </div>
+                            <div class="swiper-wrapper"><a class="slider__top-slide swiper-slide js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><img src="assets/images/product.jpg" alt="Слайд" /><span class="slider__zoom"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></span></a><a class="slider__top-slide swiper-slide js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><img src="assets/images/product.jpg" alt="Слайд" /><span class="slider__zoom"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></span></a><a class="slider__top-slide swiper-slide js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><img src="assets/images/product.jpg" alt="Слайд" /><span class="slider__zoom"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></span></a></div>
                         </div>
                         <div class="slider__bottom swiper-container js-slider-bottom">
                             <div class="swiper-wrapper">
@@ -664,6 +660,7 @@
                 <div class="header">
                     <div class="container"><a class="header__logo" href="#"><img src="assets/images/logo.svg" alt="Лого" /></a>
                         <div class="header__burger js-burger-menu"><svg class="header__close js-burger-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                            <div class="header__close-block js-burger-close"></div>
                             <div class="header__menu"><a class="header__item" href="#"><svg class="header__icon"><use xlink:href="assets/images/icon.svg#icon_house"></use></svg>
                                     <p class="header__text">Главная</p>
                                 </a><a class="header__item" href="#"><svg class="header__icon"><use xlink:href="assets/images/icon.svg#icon_catalogue"></use></svg>
@@ -694,12 +691,12 @@
                         </div>
                         <div class="footer__right"><img class="footer__image" src="assets/images/footer_picture.png" alt="Картинка" title="" /><img class="footer__arrow hide-lg" src="assets/images/footer_arrow.svg" alt="Стрелка" title="" /><img class="footer__arrow show-lg" src="assets/images/footer_arrow_mobile.svg" alt="Стрелка" title="" />
                             <p class="footer__title">Свяжитесь с нами</p>
-                            <form class="form footer__form">
+                            <form class="form footer__form js-ajax-form" action="#" method="post" data-parsley-errors-messages-disabled="data-parsley-errors-messages-disabled" data-parsley-validate="data-parsley-validate">
                                 <div class="grid">
-                                    <div class="grid__col grid__col_xl_6"><input class="input" type="text" name="name" placeholder="Имя" /></div>
-                                    <div class="grid__col grid__col_xl_6"><input class="input" type="text" name="email" placeholder="E-mail" /></div>
-                                    <div class="grid__col grid__col_xl_6"><textarea class="textarea" name="message" placeholder="Ваше сообщение"></textarea></div>
-                                    <div class="grid__col grid__col_xl_6"><button class="button" type="button">Отправить</button><label class="checkradio"><input class="checkradio__input" name="agree" value="agree" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Я согласен с <a href="#">Политикой конфеденциальности</a></span></label></div>
+                                    <div class="grid__col grid__col_xl_6"><input class="input" type="text" name="name" placeholder="Имя" minlength="2" required="required" /></div>
+                                    <div class="grid__col grid__col_xl_6"><input class="input" type="email" name="email" placeholder="E-mail" required="required" /></div>
+                                    <div class="grid__col grid__col_xl_6"><textarea class="textarea" name="message" placeholder="Ваше сообщение" minlength="2" required="required"></textarea></div>
+                                    <div class="grid__col grid__col_xl_6"><button class="button" type="submit">Отправить</button><label class="checkradio"><input class="checkradio__input" name="agree" value="agree" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Я согласен с <a href="#">Политикой конфеденциальности</a></span></label></div>
                                 </div>
                             </form>
                         </div>
@@ -810,7 +807,7 @@
                     <div class="search-offer">
                         <div class="container">
                             <h2 class="search-offer__title"><b>Все просто:</b> в строке поиска ниже введите название нужного вам аксессуара</h2>
-                            <p class="search-offer__text">и мы покажем в каких магазинах он доступен на данный момент</p>
+                            <p class="search-offer__text">и мы покажем, в каких магазинах он доступен на данный момент</p>
                             <div class="search-form search-offer__form">
                                 <form class="search-form__form" action="#" method="post"><input class="search-form__input" name="text" type="text" placeholder="Пылесборник Menalux 200" /><button class="button search-form__button" type="submit">Искать</button><svg class="search-form__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg></form>
                             </div>
@@ -1041,7 +1038,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                                 <div class="product-card category__product">
@@ -1055,7 +1052,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                                 <div class="product-card category__product">
@@ -1069,7 +1066,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                                 <div class="product-card category__product">
@@ -1083,7 +1080,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                                 <div class="product-card category__product">
@@ -1097,7 +1094,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -1106,25 +1103,26 @@
                                     <div class="filters__section">
                                         <p class="filters__title">Тип</p>
                                         <div class="filters__items">
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type1" checked="checked" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">пылесборник</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type2" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">фильтр</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type3" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">насадка</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type4" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">запчасть</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type5" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">аккумулятор</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type1" checked="checked" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">пылесборник</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type2" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">фильтр</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type3" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">насадка</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type4" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">запчасть</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type5" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">аккумулятор</span></label></div>
                                         </div>
                                     </div>
                                     <div class="filters__section">
                                         <p class="filters__title">Производитель</p>
                                         <div class="filters__items">
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer1" checked="checked" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Bosch</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer2" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Samsung</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer3" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">LG</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer4" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Dyson</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer5" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Phillips</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer1" checked="checked" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Bosch</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer2" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Samsung</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer3" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">LG</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer4" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Dyson</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer5" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Phillips</span></label></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="category__close-block js-close-filters"></div>
                         </div>
                     </div>
                 </div>
@@ -1145,21 +1143,21 @@
                         <div class="filters__section">
                             <p class="filters__title">Тип</p>
                             <div class="filters__items">
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type1" checked="checked" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">пылесборник</span></label></div>
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type2" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">фильтр</span></label></div>
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type3" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">насадка</span></label></div>
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type4" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">запчасть</span></label></div>
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type5" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">аккумулятор</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type1" checked="checked" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">пылесборник</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type2" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">фильтр</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type3" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">насадка</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type4" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">запчасть</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type5" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">аккумулятор</span></label></div>
                             </div>
                         </div>
                         <div class="filters__section">
                             <p class="filters__title">Производитель</p>
                             <div class="filters__items">
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer1" checked="checked" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Bosch</span></label></div>
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer2" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Samsung</span></label></div>
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer3" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">LG</span></label></div>
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer4" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Dyson</span></label></div>
-                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer5" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Phillips</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer1" checked="checked" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Bosch</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer2" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Samsung</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer3" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">LG</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer4" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Dyson</span></label></div>
+                                <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer5" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Phillips</span></label></div>
                             </div>
                         </div>
                     </div>
@@ -1188,7 +1186,7 @@
                             </ul>
                         </div>
                         <div class="product-card__right">
-                            <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                            <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                         </div>
                     </div>
                 </div>
@@ -1210,11 +1208,7 @@
                             <div class="product__left">
                                 <div class="slider js-slider">
                                     <div class="slider__top swiper-container js-slider-top">
-                                        <div class="swiper-wrapper">
-                                            <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
-                                            <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
-                                            <div class="slider__top-slide swiper-slide"><img src="assets/images/product.jpg" alt="Слайд" /><a class="slider__zoom js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></a></div>
-                                        </div>
+                                        <div class="swiper-wrapper"><a class="slider__top-slide swiper-slide js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><img src="assets/images/product.jpg" alt="Слайд" /><span class="slider__zoom"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></span></a><a class="slider__top-slide swiper-slide js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><img src="assets/images/product.jpg" alt="Слайд" /><span class="slider__zoom"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></span></a><a class="slider__top-slide swiper-slide js-fancybox" href="assets/images/product.jpg" data-fancybox="gallery"><img src="assets/images/product.jpg" alt="Слайд" /><span class="slider__zoom"><svg><use xlink:href="assets/images/icon.svg#icon_zoom"></use></svg></span></a></div>
                                     </div>
                                     <div class="slider__bottom swiper-container js-slider-bottom">
                                         <div class="swiper-wrapper">
@@ -1226,7 +1220,7 @@
                                 </div>
                             </div>
                             <div class="product__right">
-                                <h1 class="product__title">Пылесборник Menalux 2000 Х700 T1000</h1>
+                                <h1 class="product__title"><span>Пылесборник Menalux 2000 Х700 T1000</span><a href="#"></a></h1>
                                 <p class="product__subtitle">Для пылесосов Bosch</p>
                                 <div class="product__prices">
                                     <p class="product__price">390 ₽</p><a class="button button_big product__button js-anchor" href="#results">Где купить?</a>

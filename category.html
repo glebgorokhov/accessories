@@ -26,6 +26,7 @@
         <div class="header">
             <div class="container"><a class="header__logo" href="#"><img src="assets/images/logo.svg" alt="Лого" /></a>
                 <div class="header__burger js-burger-menu"><svg class="header__close js-burger-close"><use xlink:href="assets/images/icon.svg#icon_close"></use></svg>
+                    <div class="header__close-block js-burger-close"></div>
                     <div class="header__menu"><a class="header__item" href="#"><svg class="header__icon"><use xlink:href="assets/images/icon.svg#icon_house"></use></svg>
                             <p class="header__text">Главная</p>
                         </a><a class="header__item" href="#"><svg class="header__icon"><use xlink:href="assets/images/icon.svg#icon_catalogue"></use></svg>
@@ -72,7 +73,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                                 <div class="product-card category__product">
@@ -86,7 +87,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                                 <div class="product-card category__product">
@@ -100,7 +101,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                                 <div class="product-card category__product">
@@ -114,7 +115,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                                 <div class="product-card category__product">
@@ -128,7 +129,7 @@
                                         </ul>
                                     </div>
                                     <div class="product-card__right">
-                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="#"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
+                                        <p class="product-card__price">390 ₽</p><a class="product-card__map-button" href="product.html#results"><svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg><span>Показать на карте</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -137,25 +138,26 @@
                                     <div class="filters__section">
                                         <p class="filters__title">Тип</p>
                                         <div class="filters__items">
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type1" checked="checked" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">пылесборник</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type2" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">фильтр</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type3" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">насадка</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type4" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">запчасть</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type5" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">аккумулятор</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type1" checked="checked" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">пылесборник</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type2" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">фильтр</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type3" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">насадка</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type4" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">запчасть</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="type" value="type5" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">аккумулятор</span></label></div>
                                         </div>
                                     </div>
                                     <div class="filters__section">
                                         <p class="filters__title">Производитель</p>
                                         <div class="filters__items">
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer1" checked="checked" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Bosch</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer2" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Samsung</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer3" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">LG</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer4" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Dyson</span></label></div>
-                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer5" type="radio" /><span class="checkradio__box"></span><span class="checkradio__content">Phillips</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer1" checked="checked" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Bosch</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer2" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Samsung</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer3" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">LG</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer4" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Dyson</span></label></div>
+                                            <div class="filters__item"><label class="checkradio checkradio_radio"><input class="checkradio__input" name="manufacturer" value="manufacturer5" type="checkbox" /><span class="checkradio__box"></span><span class="checkradio__content">Phillips</span></label></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="category__close-block js-close-filters"></div>
                         </div>
                     </div>
                 </div>
@@ -168,12 +170,12 @@
                 </div>
                 <div class="footer__right"><img class="footer__image" src="assets/images/footer_picture.png" alt="Картинка" title="" /><img class="footer__arrow hide-lg" src="assets/images/footer_arrow.svg" alt="Стрелка" title="" /><img class="footer__arrow show-lg" src="assets/images/footer_arrow_mobile.svg" alt="Стрелка" title="" />
                     <p class="footer__title">Свяжитесь с нами</p>
-                    <form class="form footer__form">
+                    <form class="form footer__form js-ajax-form" action="#" method="post" data-parsley-errors-messages-disabled="data-parsley-errors-messages-disabled" data-parsley-validate="data-parsley-validate">
                         <div class="grid">
-                            <div class="grid__col grid__col_xl_6"><input class="input" type="text" name="name" placeholder="Имя" /></div>
-                            <div class="grid__col grid__col_xl_6"><input class="input" type="text" name="email" placeholder="E-mail" /></div>
-                            <div class="grid__col grid__col_xl_6"><textarea class="textarea" name="message" placeholder="Ваше сообщение"></textarea></div>
-                            <div class="grid__col grid__col_xl_6"><button class="button" type="button">Отправить</button><label class="checkradio"><input class="checkradio__input" name="agree" value="agree" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Я согласен с <a href="#">Политикой конфеденциальности</a></span></label></div>
+                            <div class="grid__col grid__col_xl_6"><input class="input" type="text" name="name" placeholder="Имя" minlength="2" required="required" /></div>
+                            <div class="grid__col grid__col_xl_6"><input class="input" type="email" name="email" placeholder="E-mail" required="required" /></div>
+                            <div class="grid__col grid__col_xl_6"><textarea class="textarea" name="message" placeholder="Ваше сообщение" minlength="2" required="required"></textarea></div>
+                            <div class="grid__col grid__col_xl_6"><button class="button" type="submit">Отправить</button><label class="checkradio"><input class="checkradio__input" name="agree" value="agree" type="checkbox" required="required" /><span class="checkradio__box"></span><span class="checkradio__content">Я согласен с <a href="#">Политикой конфеденциальности</a></span></label></div>
                         </div>
                     </form>
                 </div>
