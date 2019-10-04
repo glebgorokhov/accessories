@@ -12,5 +12,34 @@ export default function popups() {
     afterClose: unfreeze,
     touch: false,
   });
+
+  $(document).on('submit', '.js-ajax-form', function (e) {
+    e.preventDefault();
+
+    const
+      form = $(this),
+      url = form.attr('action'),
+      data = form.serialize();
+
+    $.ajax({
+      type: "post",
+      url: url,
+      data: data,
+      success: function (data) {
+        console.log('Form sent.')
+      },
+    });
+
+    $.fancybox.open({
+      src: '#popup-success',
+      opts: {
+        afterLoad: freeze,
+        afterClose: unfreeze,
+        touch: false,
+      },
+    });
+
+    return false;
+  });
 }
 /* eslint-enable */

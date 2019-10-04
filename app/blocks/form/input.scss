@@ -7,9 +7,14 @@
   border-radius: 30px;
   min-height: 0;
   background-color: transparent;
+  transition: border-color $ease-main;
 
   @include rule(padding, (xl: 0 19px, lg: 0 13px));
   @include rule(font-size, (xl: 18px, lg: 16px));
+
+  &.parsley-error {
+    border-color: $color-red;
+  }
 }
 
 .textarea {
@@ -19,4 +24,8 @@
   padding-bottom: 13px;
   min-height: 108px;
   resize: none;
+
+  &.parsley-error {
+    border-color: $color-red;
+  }
 }

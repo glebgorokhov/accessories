@@ -39,6 +39,11 @@
     top: 0;
     box-sizing: border-box;
     border-radius: 6px;
+    transition: border-color $ease-main;
+
+    #{$b}.parsley-error & {
+      border-color: $color-red;
+    }
 
     &::before {
       content: '';

@@ -16,19 +16,19 @@ mixin footer()
         +e.IMG.arrow(src="assets/images/footer_arrow_mobile.svg" alt="Стрелка").show-lg
 
         +e.P.title Свяжитесь с нами
-        +form.__form
+        +form(action="#" method="post" data-parsley-errors-messages-disabled data-parsley-validate).__form.js-ajax-form
           +grid
             +col({xl: 6})
-              +input(type="text" name="name" placeholder="Имя")
+              +input(type="text" name="name" placeholder="Имя" minlength="2" required)
 
             +col({xl: 6})
-              +input(type="text" name="email" placeholder="E-mail")
+              +input(type="email" name="email" placeholder="E-mail" required)
 
             +col({xl: 6})
-              +textarea(name="message" placeholder="Ваше сообщение")
+              +textarea(name="message" placeholder="Ваше сообщение" minlength="2" required)
 
             +col({xl: 6})
-              +button('button')(type="button") Отправить
+              +button('button')(type="submit") Отправить
               +checkradio(false, "agree", "agree", false, true) Я согласен с <a href="#">Политикой конфеденциальности</a>
 
 mixin ui-kit-footer()

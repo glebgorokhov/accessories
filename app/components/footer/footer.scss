@@ -49,7 +49,7 @@
     font-size: 0;
 
     img {
-      @include rule(height, (xl: 46px, lg: 40px));
+      @include rule(height, (xl: 46px, lg: 38px));
     }
 
     &:not(:last-child) {

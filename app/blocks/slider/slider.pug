@@ -3,9 +3,9 @@ mixin slider(pagination, buttons)
     +e.top.swiper-container.js-slider-top
       .swiper-wrapper
         each item in getData('slider')
-          +e.top-slide.swiper-slide
+          +e.A.top-slide.swiper-slide(href=item, data-fancybox="gallery").js-fancybox
             img(src=item, alt="Слайд")
-            +e.A.zoom(href=item, data-fancybox="gallery").js-fancybox
+            +e.zoom
               +icon('zoom')
 
     +e.bottom.swiper-container.js-slider-bottom

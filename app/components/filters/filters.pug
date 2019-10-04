@@ -6,7 +6,7 @@ mixin filters(data)
         +e.items
           each item in section.items
             +e.item
-              +checkradio(true, item.name, item.value, item.checked, false)._radio!= item.text
+              +checkradio(false, item.name, item.value, item.checked, false)._radio!= item.text
 
 mixin ui-kit-filters()
   +ui-section

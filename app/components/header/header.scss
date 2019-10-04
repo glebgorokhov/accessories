@@ -19,6 +19,18 @@
     }
   }
 
+  &__close-block {
+    background: transparent;
+    z-index: 1000;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+
+    @include rule(display, (xl: none, lg: block));
+  }
+
   &__burger {
     margin-left: auto;
     z-index: 1000;

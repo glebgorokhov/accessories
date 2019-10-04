@@ -10,9 +10,23 @@
  */
 
 @@include('../../node_modules/sticky-kit/dist/sticky-kit.min.js')
+@@include('../../node_modules/parsleyjs/dist/parsley.min.js')
 
 $('.js-sticky').stick_in_parent({
   "offset_top": 30,
 });
+
+// Позиционирование слайдера в мобайле
+if ($('.product__left').length > 0) {
+  function sliderPosition() {
+    $('.product__left').css({
+      top: 95 + ($('.product__title').outerHeight() - 26) + 'px',
+    });
+  }
+
+  sliderPosition();
+
+  $(window).resize(sliderPosition);
+}
 
 /* eslint-enable */

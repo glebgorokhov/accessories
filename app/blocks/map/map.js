@@ -52,24 +52,62 @@ export default function maps() {
     return html;
   }
 
+  // Функция разметки списка магазинов
+  const
+    shopsBlock = $(document).find('.search-results__shops');
+
+  function shopCard (data, id) {
+    const html = `
+      <div class="shops__item">
+          <p class="shops__title">${data.address}</p>
+          <button class="shops__map-button" type="button" data-show-on-map-id="${id}">
+            <svg><use xlink:href="assets/images/icon.svg#icon_shops"></use></svg>
+            <p>Показать на карте</p>
+          </button>
+          <div class="shops__image"><img src="${data.logo}" alt="${data.address}"></div>
+      </div>
+    `;
+
+    return html;
+  }
+
   // Маркеры и кластеры
   const markers = L.markerClusterGroup({
     maxClusterRadius: 80,
   });
 
+  let placesArray = [];
+
   $.getJSON('assets/json/shops.json', function (json) {
     let objects = json;
-    let placesArray = [];
 
+    // Очищаем все массивы, слои и т.д.
+    placesArray = [];
+    markers.clearLayers();
+    shopsBlock.html('');
+
+    // Добавляем всё на карту и в список
     $.each(objects, function (i) {
       markers.addLayer(L.marker([objects[i]["lat"], objects[i]["lng"]], {icon: myIconGenerator(objects[i]["primary"])}).bindPopup(popupContent(objects[i])));
-
+      shopsBlock.append(shopCard(objects[i], i));
       placesArray.push([objects[i]["lat"], objects[i]["lng"]]);
       map.fitBounds(placesArray);
     });
   });
 
   map.addLayer(markers);
+
+  // Открываем маркер по клику на ссылку
+  $(document).on('click', '[data-show-on-map-id]', function () {
+    $(document).find('.search-results__tabs .tabs__tab[data-tab-target="map"]')[0].click();
+    map.flyTo(markers.getLayers()[$(this).data('show-on-map-id')]._latlng, 16, {
+      duration: .5,
+    });
+
+    setTimeout(() => {
+      markers.getLayers()[$(this).data('show-on-map-id')].openPopup();
+    }, 550);
+  });
 
   // Локация
   L.control.locate({
