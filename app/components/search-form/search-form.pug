@@ -1,12 +1,29 @@
-mixin search-form(title)
-  +b.search-form&attributes(attributes)
+mixin search-form(title, list)
+  // Ниже URL для подгрузки карты и списка товаров. В конец подставляется ID Товара, по которому кликнули
+  +b.search-form(data-url-for-loading-shops="assets/json/shops.json")&attributes(attributes)
     if title
       +e.P.title!= title
 
-    +e.FORM.form(action="#" method="post")
-      +e.INPUT.input(name="text" type="text" placeholder="Пылесборник Menalux 200")
+    +e.FORM.form(action="assets/json/products.json" method="get")
+      +e.INPUT.input(name="text" type="text" placeholder="Пылесборник Menalux 200").js-search-form-input
       +button('button')(type="submit").__button Искать
       +icon('search').__icon
+
+    +e.list.js-search-form-list
+      +e.item
+        +e.image
+          img(src="assets/images/product.jpg" alt="Товар")
+        +e.texts
+          +e.P.item-name Пылесборник Menalux 2000
+          +e.P.item-subname Подходит для техники Zanussi
+
+      +e.item
+        +e.image
+          img(src="assets/images/product.jpg" alt="Товар")
+        +e.texts
+          +e.P.item-name Пылесборник Menalux 2000
+          +e.P.item-subname Подходит для техники Zanussi
+
 
 mixin ui-kit-search-form()
   +ui-section

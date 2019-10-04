@@ -3,7 +3,7 @@ mixin search-offer()
     .container
       +e.H2.title <b>Все просто:</b> в строке поиска ниже введите название нужного вам аксессуара
       +e.P.text и мы покажем, в каких магазинах он доступен на данный момент
-      +search-form.__form
+      +search-form(false, true).__form
 
 mixin ui-kit-search-offer()
   +ui-section

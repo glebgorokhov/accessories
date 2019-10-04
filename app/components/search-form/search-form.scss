@@ -1,5 +1,6 @@
 .search-form {
   display: block;
+  position: relative;
 
   $b: &;
 
@@ -64,5 +65,82 @@
     top: 0;
     bottom: 0;
     margin: auto;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    background: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0 5px 30px rgba(0,0,0,.18);
+    box-sizing: border-box;
+    overflow: auto;
+    display: none;
+    transition: opacity $ease-main, transform $ease-main;
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+
+    @include rule(max-height, (xl: 392px, lg: 250px));
+
+    &.is-active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    @include rule(padding, (xl: 25px, lg: 16px));
+
+    &:not(:first-child) {
+      border-top: 1px solid rgba($color-grey-3, .2);
+    }
+  }
+
+  &__image {
+    @include rule(width, (xl: 80px, lg: 40px));
+    @include rule(height, (xl: 80px, lg: 40px));
+    @include rule(margin-right, (xl: 30px, lg: 16px));
+
+    position: relative;
+    flex-shrink: 0;
+
+    img {
+      @include center-image;
+
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__texts {
+    flex: 1;
+  }
+
+  &__item-name {
+    @include rule(font-size, (xl: 22px, lg: 16px));
+
+    line-height: 1.3;
+    font-family: $font-second;
+    transition: color $ease-main;
+
+    #{$b}__item:hover & {
+      color: $color-main;
+    }
+  }
+
+  &__item-subname {
+    @include rule(font-size, (xl: 16px, lg: 14px));
+    @include rule(margin-top, (xl: 8px, lg: 5px));
+
+    color: $color-main;
+    line-height: 1.3;
   }
 }

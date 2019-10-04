@@ -7,7 +7,7 @@ import 'leaflet.locatecontrol';
 
 const $ = window.$;
 
-export default function maps() {
+export function maps() {
   if (!$('#map').length) return;
 
   const map = L.map('map', {
@@ -34,7 +34,7 @@ export default function maps() {
   }
 
   // Генерируем содержимое попапа
-  function popupContent (data) {
+  function popupContent(data) {
     let html = `
       <div class="map-popup">
         <div class="map-popup__head">
@@ -56,7 +56,7 @@ export default function maps() {
   const
     shopsBlock = $(document).find('.search-results__shops');
 
-  function shopCard (data, id) {
+  function shopCard(data, id) {
     const html = `
       <div class="shops__item">
           <p class="shops__title">${data.address}</p>
@@ -78,24 +78,30 @@ export default function maps() {
 
   let placesArray = [];
 
-  $.getJSON('assets/json/shops.json', function (json) {
-    let objects = json;
+  function loadShopsForUrl(url) {
+    $.getJSON(url, function (json) {
+      let objects = json;
 
-    // Очищаем все массивы, слои и т.д.
-    placesArray = [];
-    markers.clearLayers();
-    shopsBlock.html('');
+      // Очищаем все массивы, слои и т.д.
+      placesArray = [];
+      markers.clearLayers();
+      shopsBlock.html('');
 
-    // Добавляем всё на карту и в список
-    $.each(objects, function (i) {
-      markers.addLayer(L.marker([objects[i]["lat"], objects[i]["lng"]], {icon: myIconGenerator(objects[i]["primary"])}).bindPopup(popupContent(objects[i])));
-      shopsBlock.append(shopCard(objects[i], i));
-      placesArray.push([objects[i]["lat"], objects[i]["lng"]]);
-      map.fitBounds(placesArray);
+      // Добавляем всё на карту и в список
+      $.each(objects, function (i) {
+        markers.addLayer(L.marker([objects[i]["lat"], objects[i]["lng"]], {icon: myIconGenerator(objects[i]["primary"])}).bindPopup(popupContent(objects[i])));
+        shopsBlock.append(shopCard(objects[i], i));
+        placesArray.push([objects[i]["lat"], objects[i]["lng"]]);
+        map.fitBounds(placesArray);
+      });
     });
-  });
 
-  map.addLayer(markers);
+    map.addLayer(markers);
+
+    console.log('Подгружены карта и список для URL: ' + url);
+  }
+
+  loadShopsForUrl($(document).find('[data-default-url]').data('default-url'));
 
   // Открываем маркер по клику на ссылку
   $(document).on('click', '[data-show-on-map-id]', function () {
@@ -113,5 +119,17 @@ export default function maps() {
   L.control.locate({
     position: 'bottomright',
   }).addTo(map);
+
+  // ####################################
+  // Работа поля поиска
+  // Клик по товару
+  $(document).on('click', '.search-form__item', function () {
+    const
+      id = $(this).data('product-id'),
+      url = $(document).find('[data-url-for-loading-shops]').data('url-for-loading-shops') + id;
+
+    loadShopsForUrl(url);
+  });
 }
+
 /* eslint-enable */

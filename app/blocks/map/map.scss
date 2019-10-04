@@ -214,11 +214,11 @@
 }
 
 .leaflet-right .leaflet-control {
-  margin-right: 40px;
+  @include rule(margin-right, (xl: 40px, lg: 16px));
 }
 
 .leaflet-bottom .leaflet-control {
-  margin-bottom: 40px;
+  @include rule(margin-bottom, (xl: 40px, lg: 16px));
 }
 
 .leaflet-touch .leaflet-bar {
@@ -227,8 +227,8 @@
 }
 
 .leaflet-control-locate {
-  width: 84px;
-  height: 84px;
+  @include rule(width, (xl: 84px, lg: 55px));
+  @include rule(height, (xl: 84px, lg: 55px));
 
   > a.leaflet-bar-part:first-child {
     padding: 0;
@@ -242,6 +242,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: white;
+
+    @include rule(background-size, (lg: 23px));
 
     span {
       display: none;

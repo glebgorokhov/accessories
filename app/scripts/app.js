@@ -10,7 +10,7 @@ import scrollbar from '../blocks/scrollbar/scrollbar';
 import {slider} from '../blocks/slider/slider';
 import tooltips from '../blocks/tooltip/tooltip';
 import tabs from '../blocks/tabs/tabs';
-import maps from '../blocks/map/map';
+import {maps} from "../blocks/map/map";
 import accordion from '../blocks/accordion/accordion';
 import '../blocks/rating/rating';
 import '../blocks/dropdown/dropdown';
@@ -20,6 +20,7 @@ import {searchResults} from "../components/search-results/search-results";
 import {filters} from "../components/filters/filters";
 import {inputClear} from "../blocks/form/form";
 import {shops} from "../components/shops/shops";
+import {searchForm} from "../components/search-form/search-form";
 
 const $ = window.$;
 
@@ -37,7 +38,6 @@ $(() => {
   datepicker();
   inputmask();
   numberinput();
-  maps();
   scrollAnimation();
   accordion();
   putBlockIntoSlot();
@@ -46,5 +46,7 @@ $(() => {
   filters();
   inputClear();
   shops();
+  searchForm();
+  maps();
 });
 /* eslint-enable */
