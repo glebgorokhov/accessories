@@ -67,9 +67,25 @@
             <div class="search-offer">
                 <div class="container">
                     <h2 class="search-offer__title"><b>Все просто:</b> в строке поиска ниже введите название нужного вам аксессуара</h2>
-                    <p class="search-offer__text">и мы покажем, в каких магазинах он доступен на данный момент</p>
-                    <div class="search-form search-offer__form">
-                        <form class="search-form__form" action="#" method="post"><input class="search-form__input" name="text" type="text" placeholder="Пылесборник Menalux 200" /><button class="button search-form__button" type="submit">Искать</button><svg class="search-form__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg></form>
+                    <p class="search-offer__text">и мы покажем, в каких магазинах он доступен на данный момент</p><!-- Ниже URL для подгрузки карты и списка товаров. В конец подставляется ID Товара, по которому кликнули-->
+                    <div class="search-form search-offer__form" data-url-for-loading-shops="assets/json/shops.json">
+                        <form class="search-form__form" action="assets/json/products.json" method="get"><input class="search-form__input js-search-form-input" name="text" type="text" placeholder="Пылесборник Menalux 200" /><button class="button search-form__button" type="submit">Искать</button><svg class="search-form__icon"><use xlink:href="assets/images/icon.svg#icon_search"></use></svg></form>
+                        <div class="search-form__list js-search-form-list">
+                            <div class="search-form__item">
+                                <div class="search-form__image"><img src="assets/images/product.jpg" alt="Товар" /></div>
+                                <div class="search-form__texts">
+                                    <p class="search-form__item-name">Пылесборник Menalux 2000</p>
+                                    <p class="search-form__item-subname">Подходит для техники Zanussi</p>
+                                </div>
+                            </div>
+                            <div class="search-form__item">
+                                <div class="search-form__image"><img src="assets/images/product.jpg" alt="Товар" /></div>
+                                <div class="search-form__texts">
+                                    <p class="search-form__item-name">Пылесборник Menalux 2000</p>
+                                    <p class="search-form__item-subname">Подходит для техники Zanussi</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -136,7 +152,7 @@
                     </div>
                 </div>
                 <div class="tabs-content__wrapper search-results__map is-active" data-tab="map" data-tab-group="search-results">
-                    <div class="map" id="map"></div>
+                    <div class="map" id="map" data-default-url="assets/json/shops.json"></div>
                 </div>
             </div>
         </main>
