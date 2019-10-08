@@ -210,7 +210,12 @@
 // Geo
 
 .leaflet-top.leaflet-left {
-  display: none;
+  left: auto;
+  top: auto;
+  bottom: 0;
+  right: 0;
+
+  @include rule(display, (lg: none !important));
 }
 
 .leaflet-right .leaflet-control {
@@ -275,4 +280,51 @@
   svg {
     display: none;
   }
+}
+
+a.leaflet-control-zoom-in:first-child, a.leaflet-control-zoom-out:last-child {
+  width: 54px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 50px;
+  font-family: $font-main;
+  font-weight: 400;
+  background: white !important;
+
+  &:hover {
+    color: $color-main !important;
+  }
+}
+
+a.leaflet-control-zoom-in:first-child {
+  border-top-left-radius: 500px !important;
+  border-top-right-radius: 500px !important;
+  border: 0 !important;
+  position: relative;
+  line-height: 44px;
+
+  &::after {
+    content: '';
+    bottom: -1px;
+    left: 8px;
+    right: 8px;
+    height: 0;
+    border-top: 1px solid #E6E6E6;
+    position: absolute;
+  }
+}
+
+a.leaflet-control-zoom-out:last-child {
+  border-bottom-left-radius: 500px !important;
+  border-bottom-right-radius: 500px !important;
+  line-height: 37px;
+}
+
+.leaflet-control-zoom {
+  border-radius: 100px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.24) !important;
+  position: absolute !important;
+  bottom: 158px !important;
+  margin: 0 !important;
+  right: 55px !important;
 }
