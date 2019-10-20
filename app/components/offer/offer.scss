@@ -29,7 +29,7 @@
     position: relative;
 
     @include rule(font-size, (lg: 0));
-    @include rule(padding-left, (xl: 102px, lg: 0px));
+    @include rule(padding-left, (xl: 102px, lg: 0));
     @include rule(width, (xl: 574px, lg: auto));
     @include rule(height, (xl: 287px, lg: auto));
     @include rule(position, (lg: absolute));

@@ -10,8 +10,8 @@
   @include rule(width, (xl: 76px !important, lg: 44px !important));
   @include rule(height, (xl: 76px !important, lg: 44px !important));
 
-  background: #323E6F;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: #323e6f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
 
   @include rule(margin-top, (xl: -38px !important, lg: -22px !important));
   @include rule(margin-left, (xl: -38px !important, lg: -22px !important));
@@ -41,8 +41,8 @@
   @include rule(width, (xl: 36px, lg: 25px));
   @include rule(height, (xl: 36px, lg: 25px));
 
-  background: #323E6F;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: #323e6f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -60,7 +60,7 @@
   }
 
   &_false {
-    background: #B4B4B4;
+    background: #b4b4b4;
   }
 }
 
@@ -116,7 +116,7 @@
 
 .leaflet-popup-content-wrapper {
   background: white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.250311);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, .250311);
   padding: 0;
 
   @include rule(border-radius, (xl: 10px, lg: 6px));
@@ -127,6 +127,7 @@
   padding: 0;
   font-size: 0;
   font-family: $font-main;
+
   @include rule(width, (xl: 476px !important, lg: 286px !important));
 }
 
@@ -242,7 +243,7 @@
     height: 100%;
     display: block;
     border-radius: 50%;
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.247792);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .247792);
     background-image: url('../images/locate.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -256,8 +257,8 @@
   }
 }
 
-.leaflet-pane>svg path.leaflet-interactive {
-  fill: rgba(#59A855, .1);
+.leaflet-pane > svg path.leaflet-interactive {
+  fill: rgba(#59a855, .1);
   fill-opacity: 1;
 }
 
@@ -273,7 +274,7 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   border: 0;
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.247792);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, .247792);
 
   @include rule(background-size, (lg: 13px));
 
@@ -309,7 +310,7 @@ a.leaflet-control-zoom-in:first-child {
     left: 8px;
     right: 8px;
     height: 0;
-    border-top: 1px solid #E6E6E6;
+    border-top: 1px solid #e6e6e6;
     position: absolute;
   }
 }
@@ -322,7 +323,7 @@ a.leaflet-control-zoom-out:last-child {
 
 .leaflet-control-zoom {
   border-radius: 100px;
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.24) !important;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, .24) !important;
   position: absolute !important;
   bottom: 158px !important;
   margin: 0 !important;

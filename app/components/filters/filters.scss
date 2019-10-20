@@ -10,6 +10,7 @@
   $b: &;
 
   &__section {
+
     & + & {
       margin-top: 23px;
     }
@@ -21,12 +22,14 @@
   }
 
   &__items {
+
     &:not(:first-child) {
       @include rule(margin-top, (xl: 24px, lg: 15px));
     }
   }
 
   &__item {
+
     &:not(:first-child) {
       margin-top: 11px;
     }

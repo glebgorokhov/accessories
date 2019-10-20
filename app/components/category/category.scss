@@ -45,7 +45,7 @@
     @include rule(bottom, (lg: 0));
     @include rule(right, (lg: 100%));
     @include rule(background, (lg: white));
-    @include rule(box-shadow, (lg: 0px 5px 30px rgba(0, 0, 0, 0.250311)));
+    @include rule(box-shadow, (lg: 0 5px 30px rgba(0, 0, 0, .250311)));
     @include rule(box-sizing, (lg: border-box));
     @include rule(padding, (lg: 42px 16px 30px));
     @include rule(z-index, (lg: 100));

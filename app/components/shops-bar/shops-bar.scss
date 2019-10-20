@@ -60,6 +60,7 @@
     }
 
     &_shop {
+
       img {
         @include rule(width, (lg: 26px));
       }

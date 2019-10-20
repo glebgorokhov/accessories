@@ -91,6 +91,7 @@
   }
 
   &__info {
+
     &:not(:first-child) {
       @include rule(margin-top, (xl: 40px, lg: 35px));
     }

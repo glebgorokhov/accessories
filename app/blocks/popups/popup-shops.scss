@@ -52,6 +52,7 @@
   }
 
   &__content {
+
     &:not(:first-child) {
       @include rule(margin-top, (xl: 14px, lg: 12px));
     }

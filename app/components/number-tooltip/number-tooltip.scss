@@ -7,8 +7,8 @@
   &__number {
     color: white;
     padding: 9px;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.247792);
+    background: rgba(255, 255, 255, .25);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .247792);
     border-radius: 50%;
     position: relative;
     z-index: 2;
@@ -20,7 +20,7 @@
       color: white;
       line-height: 54px;
       text-align: center;
-      box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.247792);
+      box-shadow: 0 8px 10px rgba(0, 0, 0, .247792);
       font-size: 22px;
       border-radius: 50%;
       display: block;
