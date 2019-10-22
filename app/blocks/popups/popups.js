@@ -3,12 +3,20 @@
 import '@fancyapps/fancybox';
 
 import { freeze, unfreeze } from '../js-functions/freeze';
+import { closeBurger } from "../../components/header/header";
 
 const $ = window.$;
 
 export default function popups() {
   $('.js-fancybox').fancybox({
-    afterLoad: freeze,
+    afterLoad: function () {
+      freeze();
+
+      setTimeout(() => {
+        closeBurger();
+        freeze();
+      }, globalOptions.animationDuration);
+    },
     afterClose: unfreeze,
     touch: false,
   });

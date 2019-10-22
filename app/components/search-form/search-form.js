@@ -39,6 +39,10 @@ export function searchForm () {
                 <p class="search-form__item-name">${data.name}</p>
                 <p class="search-form__item-subname">${data.option}</p>
             </div>
+            <div class="search-form__buttons">
+                <button type="button" class="search-form__smallbutton search-form__smallbutton_search">Найти</button>
+                <a class="search-form__smallbutton search-form__smallbutton_more" href="${data.link}" target="_blank">Подробнее</a>
+            </div>
         </div>
       `;
 
@@ -71,11 +75,12 @@ export function searchForm () {
   });
 
   // Клик по товару
-  $(document).on('click', '.search-form__item', function () {
+  $(document).on('click', '.search-form__smallbutton_search', function () {
     const
-      name = $(this).find('.search-form__item-name').text(),
-      input = $(this).closest('.search-form').find('input'),
-      id = $(this).data('product-id');
+      block = $(this).closest('.search-form__item'),
+      name = block.find('.search-form__item-name').text(),
+      input = block.closest('.search-form').find('input'),
+      id = block.data('product-id');
 
     input.val(name);
 

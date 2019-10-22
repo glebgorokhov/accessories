@@ -40,6 +40,16 @@
       font-weight: 300;
     }
 
+    #{$b}__button_header & {
+      span {
+        font-size: 20px;
+      }
+
+      img {
+        top: 0 !important;
+      }
+    }
+
     &:hover {
       color: $color-main;
     }
@@ -54,7 +64,7 @@
         @include rule(top, (xl: -5px, lg: -2px));
       }
 
-      #{$b}.is-active & {
+      #{$b}__button.is-active & {
         display: none;
       }
     }
@@ -65,7 +75,7 @@
         @include rule(width, (lg: 26px));
       }
 
-      #{$b}:not(.is-active) & {
+      #{$b}__button:not(.is-active) & {
         display: none;
       }
     }

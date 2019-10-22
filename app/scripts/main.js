@@ -13,7 +13,7 @@
 @@include('../../node_modules/parsleyjs/dist/parsley.min.js')
 
 $('.js-sticky').stick_in_parent({
-  "offset_top": 30,
+  "offset_top": 130,
 });
 
 // Позиционирование слайдера в мобайле

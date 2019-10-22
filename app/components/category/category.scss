@@ -18,6 +18,10 @@
     }
   }
 
+  &__pagination {
+    margin-top: 40px;
+  }
+
   &__title {
     @include rule(font-size, (xl: 34px, lg: 26px));
     @include rule(line-height, (xl: 42px, lg: 32px));

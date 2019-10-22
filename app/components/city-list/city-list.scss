@@ -1,0 +1,47 @@
+.city-list {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 10px;
+
+  z-index: 100;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, .18);
+  box-sizing: border-box;
+  overflow: auto;
+  transition: opacity $ease-main, transform $ease-main;
+  max-height: 199px;
+
+  @include rule(width, (xl: 324px, lg: 100%));
+
+  transform: translate3d(0, 10px, 0);
+  opacity: 0;
+  display: none;
+
+  &.is-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  $b: &;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 15px;
+    transition: color $ease-main;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &:not(:first-child) {
+      border-top: 1px solid rgba($color-grey-3, .2);
+    }
+  }
+}

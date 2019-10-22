@@ -21,6 +21,8 @@ import {filters} from "../components/filters/filters";
 import {inputClear} from "../blocks/form/form";
 import {shops} from "../components/shops/shops";
 import {searchForm} from "../components/search-form/search-form";
+import {preloader} from "../components/preloader/preloader";
+import {cityList} from "../components/city-list/city-list";
 
 const $ = window.$;
 
@@ -48,5 +50,7 @@ $(() => {
   shops();
   searchForm();
   maps();
+  preloader();
+  cityList();
 });
 /* eslint-enable */

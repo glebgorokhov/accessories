@@ -9,7 +9,9 @@
     align-items: center;
     box-sizing: border-box;
 
+    @include rule(flex-wrap, (lg: wrap));
     @include rule(padding, (xl: 7px 0, lg: 14px 0));
+    @include rule(flex-wrap, (lg: wrap));
 
     &.js-select-shop {
       cursor: pointer;
@@ -22,6 +24,7 @@
 
   &__title {
     flex: 1;
+    word-break: break-word;
 
     @include rule(font-size, (xl: 24px, lg: 17px));
     @include rule(line-height, (xl: 32px, lg: 21px));
@@ -36,14 +39,39 @@
     }
   }
 
-  &__map-button {
-    @include rule(display, (xl: flex, lg: none));
+  &__button {
+    border: 2px solid $color-red;
+    color: $color-red;
+    border-radius: 50px;
+    transition: border-color $ease-main, color $ease-main;
+    white-space: nowrap;
+    flex-shrink: 0;
 
+    @include rule(font-size, (xl: 16px, lg: 14px));
+    @include rule(line-height, (xl: 32px, lg: 26px));
+    @include rule(padding, (xl: 0 30px, lg: 0 20px));
+    @include rule(height, (xl: 36px, lg: 30px));
+    @include rule(order, (lg: 100));
+    @include rule(margin-top, (lg: 10px));
+    @include rule(margin-bottom, (lg: 8px));
+    @include rule(margin-right, (xl: 40px, lg: 100vw));
+
+    #{$b}__item:hover & {
+      border-color: #de2828;
+      color: #de2828;
+    }
+  }
+
+  &__map-button {
+    display: flex;
     align-items: center;
     color: $color-grey-6;
     transition: color $ease-main;
     appearance: none;
-    width: 320px;
+
+    @include rule(margin, (lg: 10px 0));
+    @include rule(width, (xl: 320px, lg: 100%));
+    @include rule(order, (lg: 1000));
 
     &:hover {
       color: $color-main;
@@ -51,10 +79,12 @@
 
     svg {
       flex-shrink: 0;
-      width: 25px;
-      height: 32px;
-      fill: $color-main;
+
+      @include rule(width, (xl: 25px, lg: 12px));
+      @include rule(height, (xl: 32px, lg: 16px));
+
       margin-right: 10px;
+      fill: $color-main;
     }
 
     p {

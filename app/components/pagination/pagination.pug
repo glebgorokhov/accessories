@@ -1,0 +1,18 @@
+mixin pagination()
+  +b.pagination&attributes(attributes)
+    each item in [1, 2, 3, 4, 5, 6]
+      +e.A.item(href="#", class=(item === 1 ? 'is-active' : false))!= item
+
+mixin ui-kit-pagination()
+  +ui-section
+    +ui-section-head
+      +ui-title Пагинация
+      +ui-path
+        p Компонент: components/pagination/pagination
+
+    +ui-section-content()
+      +pagination
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

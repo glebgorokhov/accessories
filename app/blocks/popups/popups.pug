@@ -19,9 +19,11 @@ mixin popup-shops()
       .container
         +e.P.title Адреса магазинов в городе:
         +e.content
-          +e.FORM.form(action="#" method="post")
-            +e.INPUT.input(name="city" type="text" value="Зеленоград").js-input-with-remove
+          +e.FORM.form(action="assets/json/cities.json" method="get")
+            +e.INPUT.input(name="city" type="text" value="Зеленоград").js-input-with-remove.js-city-input
             +icon('close').__clear-input.js-clear-input
+
+          +city-list
 
     +e.bottom
       .container

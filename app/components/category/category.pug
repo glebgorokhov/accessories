@@ -3,8 +3,11 @@ mixin category()
     +e.H2.title Пылесборники для пылесосов
     +e.grid
       +e.left
-        each item in getData('products')
-          +product-card(item).__product
+        +e.products
+          each item in getData('products')
+            +product-card(item).__product
+
+        +pagination.__pagination
 
       +e.right.js-filters-block
         +icon('close').__close.js-close-filters

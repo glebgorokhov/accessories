@@ -12,6 +12,7 @@ export function maps() {
 
   const map = L.map('map', {
     scrollWheelZoom: false,
+    dragging: $(window).width() >= globalOptions.sizes.lg,
   }).setView([0, 0], 13);
 
   L.tileLayer('https://api.mapbox.com/styles/v1/{username}/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
@@ -89,7 +90,7 @@ export function maps() {
 
       // Добавляем всё на карту и в список
       $.each(objects, function (i) {
-        markers.addLayer(L.marker([objects[i]["lat"], objects[i]["lng"]], {icon: myIconGenerator(objects[i]["primary"])}).bindPopup(popupContent(objects[i])));
+        markers.addLayer(L.marker([objects[i]["lat"], objects[i]["lng"]], {icon: myIconGenerator(objects[i]["primary"])}).bindPopup(popupContent(objects[i])).on('click', clickZoom));
         shopsBlock.append(shopCard(objects[i], i));
         placesArray.push([objects[i]["lat"], objects[i]["lng"]]);
         map.fitBounds(placesArray);
@@ -113,6 +114,24 @@ export function maps() {
     setTimeout(() => {
       markers.getLayers()[$(this).data('show-on-map-id')].openPopup();
     }, 550);
+  });
+
+  function clickZoom(e) {
+    map.flyTo(e.target.getLatLng(), 16, {
+      duration: .5,
+    });
+  }
+
+  map.on('resize', function () {
+    console.log('Ресайз карты')
+  });
+
+  map.on('move', function () {
+    console.log('Перемещение карты')
+  });
+
+  map.on('moveend', function () {
+    console.log('Карта перемещена')
   });
 
   // Локация

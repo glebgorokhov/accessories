@@ -1,0 +1,37 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  @include rule(margin, (xl: 30px -10px -10px, lg: 20px -5px -5px));
+
+  $b: &;
+
+  &__item {
+    @include rule(width, (xl: 36px, lg: 30px));
+    @include rule(height, (xl: 36px, lg: 30px));
+    @include rule(line-height, (xl: 32px, lg: 28px));
+    @include rule(margin, (xl: 10px, lg: 5px));
+    @include rule(font-size, (xl: 16px, lg: 14px));
+
+    border: 2px solid $color-grey-2;
+
+    @include rule(border-width, (lg: 1px));
+
+    text-align: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: border-color $ease-main, background $ease-main, color $ease-main;
+    color: $color-grey-6;
+
+    &:hover {
+      border-color: $color-main;
+      color: black;
+    }
+
+    &.is-active {
+      border-color: $color-main;
+      background-color: $color-main;
+      color: white;
+    }
+  }
+}

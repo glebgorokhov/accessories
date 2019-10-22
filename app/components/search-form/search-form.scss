@@ -14,6 +14,34 @@
     }
   }
 
+  &__buttons {
+    border: 1px solid rgba($color-grey-3, .2);
+    border-radius: 6px;
+    display: flex;
+    white-space: nowrap;
+
+    @include rule(margin-left, (xl: 40px, lg: 56px));
+    @include rule(margin-top, (lg: 8px));
+    @include rule(margin-right, (lg: 100%));
+  }
+
+  &__smallbutton {
+    @include rule(font-size, (xl: 18px, lg: 14px));
+    @include rule(padding, (xl: 12px 15px, lg: 9px 10px));
+
+    line-height: 1;
+    transition: color $ease-main;
+    color: black;
+
+    &:hover {
+      color: $color-main;
+    }
+
+    &:not(:first-child) {
+      border-left: 1px solid rgba($color-grey-3, .2);
+    }
+  }
+
   &__title {
     @include rule(font-size, (xl: 24px, lg: 20px));
     @include rule(margin-bottom, (xl: 23px, lg: 20px));
@@ -97,7 +125,7 @@
   &__item {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    flex-wrap: wrap;
 
     @include rule(padding, (xl: 25px, lg: 16px));
 

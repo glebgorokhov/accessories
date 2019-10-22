@@ -4,6 +4,15 @@ mixin header()
       +e.A.logo(href="#")
         img(src="assets/images/logo.svg" alt="Лого")
 
+      +e.city
+        a(class="shops-bar__button shops-bar__button_header js-fancybox" href="#popup-shops")
+          span(class="shops-bar__button-wrap shops-bar__button-wrap_choose")
+            img(src="assets/images/choose-shop.svg" alt="Выбрать магазин")
+            span Магазин не выбран
+          span(class="shops-bar__button-wrap shops-bar__button-wrap_shop")
+            img(src="assets/images/exchange.svg" alt="Поменять магазин")
+            span Москва, Садово-Спасская, 51
+
       +e.burger.js-burger-menu
         +icon('close').__close.js-burger-close
         +e.close-block.js-burger-close
@@ -13,6 +22,10 @@ mixin header()
             +e.A.item(href=item.link)
               +icon(item.icon).__icon
               +e.P.text!= item.text
+
+          +e.A.item(href="#popup-shops").js-fancybox.js-shop-mobile-button.show-lg
+            +icon('exchange').__icon
+            +e.P.text Магазин не выбран
 
       +e.burger-button.js-burger-button
         span

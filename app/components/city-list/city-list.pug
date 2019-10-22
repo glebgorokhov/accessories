@@ -1,0 +1,20 @@
+mixin city-list()
+  +b.city-list.js-city-list&attributes(attributes)
+    +e.item Зеленоград
+    +e.item Зеленоград
+    +e.item Зеленоград
+    +e.item Зеленоград
+
+mixin ui-kit-city-list()
+  +ui-section
+    +ui-section-head
+      +ui-title Список городов
+      +ui-path
+        p Компонент: components/city-list/city-list
+
+    +ui-section-content()
+      +city-list
+
+    //- При +ui-section-content(true) контейнер отсутствует
+    //- Для перечисления инлайновых блоков используется миксин +ui-elements-list()
+    //- Рамка вокруг особой секции: +ui-special()

@@ -4,6 +4,8 @@
   transition: transform $ease-main;
   width: 100%;
 
+  @include rule(padding-top, (xl: 100px, lg: 74px));
+
   $b: &;
 
   &.is-active {
