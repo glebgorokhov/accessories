@@ -15,7 +15,8 @@
     "sku": "3023372025607-9001961367",
     "availability": true,
     "brand": "3",
-    "currency": "RUB"
+    "currency": "RUB",
+    "link": "#"
   },
   {
     "id": "36",
@@ -33,7 +34,8 @@
     "sku": "3023372025607-9001961367",
     "availability": true,
     "brand": "3",
-    "currency": "RUB"
+    "currency": "RUB",
+    "link": "#"
   },
   {
     "id": "36",
@@ -51,7 +53,8 @@
     "sku": "3023372025607-9001961367",
     "availability": true,
     "brand": "3",
-    "currency": "RUB"
+    "currency": "RUB",
+    "link": "#"
   },
   {
     "id": "36",
@@ -69,6 +72,7 @@
     "sku": "3023372025607-9001961367",
     "availability": true,
     "brand": "3",
-    "currency": "RUB"
+    "currency": "RUB",
+    "link": "#"
   }
 ]

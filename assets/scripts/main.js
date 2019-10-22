@@ -25,7 +25,7 @@ y=function(){x();return l()},H=function(){G=!0;f.off("touchmove",l);f.off("scrol
 
 
 $('.js-sticky').stick_in_parent({
-  "offset_top": 30,
+  "offset_top": 130,
 });
 
 // Позиционирование слайдера в мобайле
